@@ -1,7 +1,122 @@
+@import "font";
 @import "header";
 @import "footer";
 
-body{
-  margin: 0;
-  padding: 0;
+.main {
+  display: grid;
+  width: 100%;
+  grid-template-areas: "oysho zara zara zara" "oysho massimo massimo pullbear" "bershka bershka bershka pullbear" "piraeus stradivarius stradivarius eres" "piraeus universal universal eres";
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(4, 25%);
 }
+
+.stores {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  img {
+    height: 100%;
+    width: 100%;
+  }
+  &-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    pointer-events: none;
+    color: #ffffff;
+    padding: 40px 20px;
+    opacity: 0;
+    &__brand {
+      font-size: 10px;
+      letter-spacing: 1em;
+      text-transform: uppercase;
+    }
+    &__plus {
+      position: relative;
+      display: inline-block;
+      height: 67px;
+      width: 67px;
+      &::after,&::before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        border: 1px solid #ffffff;
+      }
+      &::before{
+        transform: rotate(90deg);
+      }
+
+    }
+    &__text {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+    }
+  }
+  &:hover > .stores-hover{
+    opacity: 1;
+  }
+}
+
+  .oysho {
+    grid-area: oysho;
+    &-hover{
+      background: #EB5757;
+    }
+  }
+  .zara {
+    grid-area: zara;
+    &-hover{
+      background: #219653;
+    }
+  }
+  .massimo {
+    grid-area: massimo;
+    &-hover{
+      background: #F2C94C;
+    }
+  }
+  .pullbear {
+    grid-area: pullbear;
+    &-hover{
+      background: #2F80ED;
+    }
+  }
+  .bershka {
+    grid-area: bershka;
+    &-hover{
+      background: #9B51E0;
+    }
+  }
+  .piraeus {
+    grid-area: piraeus;
+    &-hover{
+      background: #219653;
+    }
+  }
+  .stradivarius {
+    grid-area: stradivarius;
+    &-hover{
+      background: #EB5757;
+    }
+  }
+  .eres {
+    grid-area: eres;
+    &-hover{
+      background: #F2994A;
+    }
+  }
+  .universal {
+    grid-area: universal;
+    &-hover{
+      background: #2F80ED;
+    }
+  }

@@ -1,11 +1,23 @@
+@font-face {
+  src: url("../fonts/Montserrat-Regular.ttf");
+  font-family: 'Montserrat'; }
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
+
+body {
+  font-family: "Montserrat";
+  overflow-x: hidden;
+  width: 100vw;
+  margin: 0;
+  padding: 0; }
 
 .header {
   width: 100%;
   height: 160px; }
   .header__wrap {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -18,6 +30,13 @@
     height: 100%;
     max-width: 1360px;
     margin: 0 auto; }
+  .header__logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
   .header__menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -49,6 +68,51 @@
         .header__menu-right span:nth-child(2) {
           width: 100%; }
 
+.lang {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 22px;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-transition: 0.9s easy;
+  -o-transition: 0.9s easy;
+  transition: 0.9s easy; }
+  .lang-arrow {
+    color: #222222;
+    letter-spacing: 3px;
+    font-size: 18px;
+    font-weight: 500;
+    margin: auto 0; }
+  .lang:hover {
+    height: auto; }
+  .lang-list__item:hover {
+    background: #DE3346; }
+
+.lang-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.lang-list__item a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 2px; }
+
+.header__menu {
+  cursor: pointer; }
+  .header__menu:hover .header__menu-right span:first-child {
+    margin-left: auto;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear; }
+
 .footer {
   display: inline-block;
   width: 100%;
@@ -63,7 +127,8 @@
     width: 100%;
     max-width: 1360px;
     height: 100%;
-    padding: 10px 20px; }
+    padding: 10px 20px;
+    margin: 0 auto; }
   .footer > * {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -72,24 +137,111 @@
     display: -ms-flexbox;
     display: flex; }
 
-.lang-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 22px;
+.main {
+  display: grid;
+  width: 100%;
+  grid-template-areas: "oysho zara zara zara" "oysho massimo massimo pullbear" "bershka bershka bershka pullbear" "piraeus stradivarius stradivarius eres" "piraeus universal universal eres";
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(4, 25%); }
+
+.stores {
+  position: relative;
+  cursor: pointer;
   overflow: hidden; }
+  .stores img {
+    height: 100%;
+    width: 100%; }
+  .stores-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    pointer-events: none;
+    color: #ffffff;
+    padding: 40px 20px;
+    opacity: 0; }
+    .stores-hover__brand {
+      font-size: 10px;
+      letter-spacing: 1em;
+      text-transform: uppercase; }
+    .stores-hover__plus {
+      position: relative;
+      display: inline-block;
+      height: 67px;
+      width: 67px; }
+      .stores-hover__plus::after, .stores-hover__plus::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        border: 1px solid #ffffff; }
+      .stores-hover__plus::before {
+        -webkit-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+                transform: rotate(90deg); }
+    .stores-hover__text {
+      font-size: 10px;
+      letter-spacing: 0.1em; }
+  .stores:hover > .stores-hover {
+    opacity: 1; }
 
-.lang-list__item a {
-  text-decoration: none;
-  font-size: 20px;
-  color: #000000;
-  text-transform: uppercase;
-  letter-spacing: 2px; }
+.oysho {
+  grid-area: oysho; }
+  .oysho-hover {
+    background: #EB5757; }
 
-body {
-  margin: 0;
-  padding: 0; }
+.zara {
+  grid-area: zara; }
+  .zara-hover {
+    background: #219653; }
+
+.massimo {
+  grid-area: massimo; }
+  .massimo-hover {
+    background: #F2C94C; }
+
+.pullbear {
+  grid-area: pullbear; }
+  .pullbear-hover {
+    background: #2F80ED; }
+
+.bershka {
+  grid-area: bershka; }
+  .bershka-hover {
+    background: #9B51E0; }
+
+.piraeus {
+  grid-area: piraeus; }
+  .piraeus-hover {
+    background: #219653; }
+
+.stradivarius {
+  grid-area: stradivarius; }
+  .stradivarius-hover {
+    background: #EB5757; }
+
+.eres {
+  grid-area: eres; }
+  .eres-hover {
+    background: #F2994A; }
+
+.universal {
+  grid-area: universal; }
+  .universal-hover {
+    background: #2F80ED; }
