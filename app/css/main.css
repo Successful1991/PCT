@@ -2,8 +2,18 @@
   --header-h: 160px; }
 
 @font-face {
-  src: url("../fonts/Montserrat-Regular.ttf");
-  font-family: 'Montserrat'; }
+  font-family: 'Montserrat';
+  font-style: "normal";
+  src: url("../fonts/montserratRegular/montserratRegular.eot");
+  src: url("../fonts/montserratRegular/montserratRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/montserratRegular/montserratRegular.woff") format("woff"), url("../fonts/montserratRegular/montserratRegular.ttf") format("truetype");
+  font-weight: 400; }
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 900;
+  font-style: "normal";
+  src: url("../fonts/montserratBlack/montserratBlack.eot");
+  src: url("../fonts/montserratBlack/montserratBlack.eot?#iefix") format("embedded-opentype"), url("../fonts/montserratBlack/montserratBlack.woff") format("woff"), url("../fonts/montserratBlack/montserratBlack.ttf") format("truetype"); }
 
 * {
   -webkit-box-sizing: border-box;
