@@ -1,0 +1,81 @@
+.first--screen {
+  display: grid;
+  grid-template-areas: 'logo img img img img year' 'mouse . brand brand . year';
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(6, 1fr);
+  width: 100%; }
+  .first--screen__logo {
+    grid-area: logo;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 100%;
+    padding: 10px; }
+  .first--screen__img {
+    grid-area: img; }
+    .first--screen__img img {
+      width: 100%; }
+  .first--screen__year {
+    position: relative;
+    grid-area: year;
+    text-transform: uppercase; }
+    .first--screen__year-num {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 27vw;
+      -webkit-transform: translate(-70%, -50%);
+          -ms-transform: translate(-70%, -50%);
+              transform: translate(-70%, -50%); }
+  .first--screen__mouse {
+    grid-area: mouse;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .first--screen__brand {
+    grid-area: brand;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 30px;
+    font-size: 18px;
+    letter-spacing: 0.5em;
+    text-transform: uppercase; }
+    .first--screen__brand:after {
+      content: '';
+      width: 22px;
+      height: 3px;
+      border-radius: 10px;
+      margin-top: 10px;
+      background: #282C34; }
+
+.project__name h1 {
+  visibility: hidden; }
+
+.project__name-img {
+  width: 100%;
+  -webkit-transform: translateY(10%);
+      -ms-transform: translateY(10%);
+          transform: translateY(10%); }

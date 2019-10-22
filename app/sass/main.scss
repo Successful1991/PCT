@@ -1,6 +1,7 @@
 @import "font";
 @import "header";
 @import "footer";
+@import "animate";
 
 .main {
   display: grid;
@@ -8,12 +9,15 @@
   grid-template-areas: "oysho zara zara zara" "oysho massimo massimo pullbear" "bershka bershka bershka pullbear" "piraeus stradivarius stradivarius eres" "piraeus universal universal eres";
   grid-template-rows: repeat(1, 1fr);
   grid-template-columns: repeat(4, 25%);
+  overflow: hidden;
 }
 
 .stores {
   position: relative;
   cursor: pointer;
   overflow: hidden;
+  visibility: hidden;
+  z-index: 2;
   img {
     height: 100%;
     width: 100%;

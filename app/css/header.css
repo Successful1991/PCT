@@ -24,6 +24,7 @@ body {
         -ms-flex-align: center;
             align-items: center;
     height: 100%;
+    width: 100%;
     max-width: 1360px;
     margin: 0 auto; }
   .header__logo {
