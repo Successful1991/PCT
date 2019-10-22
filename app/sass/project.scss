@@ -20,7 +20,9 @@
   &__img{
     grid-area: img;
     img{
+      height: calc(100vh - var(--header-h) - 90px);
       width: 100%;
+      object-fit: contain;
     }
   }
   &__year{
@@ -31,7 +33,8 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 27vw;
+      width: 44vh;
+      //width: 27vw;
       transform: translate(-70%, -50%);
     }
   }
@@ -58,6 +61,8 @@
   }
 }
 .project__name{
+  z-index: 2;
+  position: relative;
   h1{
     visibility: hidden;
   }
@@ -67,6 +72,94 @@
   }
 }
 .project{
-  //display: grid;
-  //grid-template-areas: '  ';
+  position: relative;
+  display: grid;
+  grid-template-areas: 'img1 info'
+  'img3 img2'
+  'img4 img5'
+  'img6 img6'
+  'img7 img8'
+  'img9 img10'
+  'img11 img11';
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(2, 50%);
+  grid-gap: 40px 0;
+  &__info{
+    display: flex;
+    width: 100%;
+    grid-area: info;
+    font-size: 14px;
+    line-height: 42px;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    table{
+      margin: auto;
+      tr{
+        td:first-child{
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  &__img-1{
+    grid-area: img1;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  &__img-2{
+    grid-area: img2;
+    width: 116%;
+    transform: translateX(-16%);
+  }
+  &__img-3{
+    grid-area: img3;
+    width: 63%;
+    margin: auto 0 0;
+    transform: translateY(50%);
+  }
+  &__img-4{
+      grid-area: img4;
+    width: 33%;
+    margin: auto 0 auto auto;
+    transform: translateX(-50%);
+  }
+  &__img-5{
+      grid-area: img5;
+    width: 66%;
+    margin: 0 auto;
+  }
+  &__img-6{
+      grid-area: img6;
+    width: 100%;
+  }
+  &__img-7{
+      grid-area: img7;
+    width: 116%;
+    //transform: translateX(16%);
+  }
+  &__img-8{
+    position: absolute;
+    right: 0;
+    top: 0;
+      grid-area: img8;
+    width: 66%;
+    margin: auto 5% 0 auto;
+    transform: translateY(30%);
+  }
+  &__img-9{
+    grid-area: img9;
+    width: 74%;
+    margin: auto 5% 0 auto;
+  }
+  &__img-10{
+      grid-area: img10;
+    width: 90%;
+    margin: auto 0 0 auto;
+  }
+  &__img-11{
+      grid-area: img11;
+    width: 39%;
+    margin: 0 auto;
+  }
+
 }
