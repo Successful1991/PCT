@@ -1,10 +1,12 @@
 .title {
+  position: relative;
   font-size: 288px;
   line-height: 240px;
   text-transform: uppercase;
   font-family: 'Montserrat';
   font-weight: 900;
-  color: #282C34; }
+  color: #282C34;
+  z-index: 50; }
   .title__first {
     color: #ffffff;
     -webkit-text-stroke: 3px #000000; }
@@ -30,3 +32,87 @@
     width: 100%;
     border: 3px solid #282C34;
     border-right: none; }
+
+.contact__content {
+  margin-top: -50px;
+  display: grid;
+  grid-template-areas: 'map address' 'form address';
+  grid-auto-rows: 1fr;
+  grid-template-columns: 2fr 1fr; }
+
+.contact .map {
+  width: 100%;
+  min-height: 400px;
+  grid-area: map; }
+
+.contact .address {
+  grid-area: address;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.1em;
+  color: #282C34; }
+  .contact .address__list {
+    margin-bottom: 50px; }
+  .contact .address__country {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    margin-bottom: 20px; }
+  .contact .address__tel {
+    margin-bottom: 20px; }
+  .contact .address__street {
+    margin-bottom: 20px; }
+
+.contact .form {
+  grid-area: form;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 72%;
+  margin-bottom: auto;
+  padding: 60px 30px 0; }
+  .contact .form label {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.5em;
+    text-transform: uppercase; }
+  .contact .form__input {
+    height: 35px;
+    font-size: 18px;
+    border: none;
+    border-bottom: 2px solid #282C34; }
+  .contact .form__info {
+    height: 20px;
+    margin-bottom: 20px; }
+  .contact .form textarea.form__input {
+    height: 70px;
+    resize: none;
+    font-size: 18px; }
+  .contact .form__submit {
+    position: absolute;
+    bottom: 20px;
+    right: -70px;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background: url("../img/Vector.svg") no-repeat center/contain;
+    border: none; }

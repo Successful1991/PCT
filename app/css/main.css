@@ -15,6 +15,13 @@
   src: url("../fonts/montserratBlack/montserratBlack.eot");
   src: url("../fonts/montserratBlack/montserratBlack.eot?#iefix") format("embedded-opentype"), url("../fonts/montserratBlack/montserratBlack.woff") format("woff"), url("../fonts/montserratBlack/montserratBlack.ttf") format("truetype"); }
 
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-style: "normal";
+  src: url("../fonts/montserratSemiBold/montserrat-SemiBold.eot");
+  src: url("../fonts/montserratSemiBold/montserrat-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/montserratSemiBold/montserrat-SemiBold.woff") format("woff"), url("../fonts/montserratSemiBold/montserrat-SemiBold.ttf") format("truetype"); }
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -422,3 +429,7 @@ body {
   grid-area: universal; }
   .universal-hover {
     background: #2F80ED; }
+
+.text-stroke {
+  color: transparent;
+  -webkit-text-stroke: 3px #282C34; }

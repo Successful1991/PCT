@@ -65,7 +65,51 @@
 
         <span class="title__four">ти</span>
     </h1>
+    <div class="contact__content">
+        <div class="map" id="contact__map"></div>
+        <ul class="address">
+            <li class="address__list">
+                <div class="address__country">Україна</div>
+                <div class="address__street">ул. Шота Руставели, 16,  г. Киев 01001 Украина</div>
+                <div class="address__tel">+380532693905</div>
+                <div class="address__email">service_ptc@ptc.pl.ua</div>
+            </li>
+            <li class="address__list">
+                <div class="address__country">Greece</div>
+                <div class="address__street">Πανεπιστημίου 56, Αθήνα, 10678</div>
+                <div class="address__tel">+30 210 3803962</div>
+            </li>
+            <li class="address__list">
+                <div class="address__country">United Kingdom</div>
+                <div class="address__street">80 Coningham Road London, W12 8BH</div>
+                <div class="address__tel">+44 7535 149606</div>
+            </li>
+            <li class="address__list">
+                <div class="address__country">Россия</div>
+                <div class="address__street">Земляной Вал, д. 9, Помещение II,
+                    комн.104. (4096) г. Москва, 105064</div>
+                <div class="address__tel">+7 968 558 50 32</div>
+                <div class="address__tel">+7 495 967 93 97</div>
+            </li>
+        </ul>
+        <form action="" class="form" id="contact__form">
+            <label for="name">ім’я:</label>
+            <input type="text" class="form__input js__form__input" id="name">
+            <span class="form__info"></span>
+
+            <label for="tel">Телефон:</label>
+            <input type="tel" class="form__input js__form__input" id="tel">
+            <span class="form__info"></span>
+
+            <label for="content">Повідомлення:</label>
+            <textarea class="form__input js__form__input" form="contact__form" id="content" ></textarea>
+            <span class="form__info"></span>
+            <input type="submit" class="form__submit" value="">
+        </form>
+    </div>
 </section>
+
+
 
 <footer class="footer">
     <div class="footer__wrap">
@@ -82,5 +126,6 @@
 <script src="app/js/libs/jquery.min.js"></script>
 <script src="app/js/libs/wow.min.js"></script>
 <script src="app/js/index.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrUcTar2ARlRKSogEQVIlWaPnmVIM_xVE&callback=initMap"></script>
 </body>
 </html>
