@@ -103,7 +103,8 @@
     flex-wrap: wrap;
     &-item{
       display: flex;
-      flex-wrap: wrap;
+      //flex-wrap: wrap;
+      flex-direction: column;
       width: 33%;
       padding: 30px 60px 30px 30px;
     }
@@ -119,10 +120,12 @@
       color: #DE3346;
     }
     &-year{
-      display: flex;
-      justify-content: center;
-      width: 70px;
-      height: 70px;
+      //display: flex;
+      //justify-content: center;
+      //width: 70px;
+      //height: 70px;
+      width: 0;
+      height: 0;
       font-size: 30px;
       line-height: 30px;
       text-align: right;
@@ -131,9 +134,13 @@
       text-transform: uppercase;
       span{
         display: inline-block;
-        margin-top: auto;
-        transform: translate(0%,120%)rotate(-90deg);
-        transform-origin: left top;
+        //margin-top: auto;
+        transform: translate(-100%,0)rotate(-90deg);
+        transform-origin: right top;
+        height: 200px;
+        width: 200px;
+        text-align: right;
+        padding: 0 6px 0 0;
       }
     }
     &-text{
@@ -141,13 +148,14 @@
       width: calc(100% - 70px);
       font-size: 18px;
       line-height: 30px;
+      margin-left: 70px;
     }
   }
   &__target{
     display: inline-block;
     width: 100%;
     padding: 90px 30px 30px;
-    background: #ebebeb url('../img/about/fon2.jpg')no-repeat center/ contain;
+    background: #ebebeb url('../img/about/fon2.jpg')no-repeat center/ auto 100%;
     &-title{
       width: 60%;
       font-weight: 600;

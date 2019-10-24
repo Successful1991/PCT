@@ -114,8 +114,10 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 33%;
     padding: 30px 60px 30px 30px; }
 
@@ -129,14 +131,8 @@
   color: #DE3346; }
 
 .about .list__item-year {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 70px;
-  height: 70px;
+  width: 0;
+  height: 0;
   font-size: 30px;
   line-height: 30px;
   text-align: right;
@@ -145,25 +141,29 @@
   text-transform: uppercase; }
   .about .list__item-year span {
     display: inline-block;
-    margin-top: auto;
-    -webkit-transform: translate(0%, 120%) rotate(-90deg);
-        -ms-transform: translate(0%, 120%) rotate(-90deg);
-            transform: translate(0%, 120%) rotate(-90deg);
-    -webkit-transform-origin: left top;
-        -ms-transform-origin: left top;
-            transform-origin: left top; }
+    -webkit-transform: translate(-100%, 0) rotate(-90deg);
+        -ms-transform: translate(-100%, 0) rotate(-90deg);
+            transform: translate(-100%, 0) rotate(-90deg);
+    -webkit-transform-origin: right top;
+        -ms-transform-origin: right top;
+            transform-origin: right top;
+    height: 200px;
+    width: 200px;
+    text-align: right;
+    padding: 0 6px 0 0; }
 
 .about .list__item-text {
   display: inline-block;
   width: calc(100% - 70px);
   font-size: 18px;
-  line-height: 30px; }
+  line-height: 30px;
+  margin-left: 70px; }
 
 .about__target {
   display: inline-block;
   width: 100%;
   padding: 90px 30px 30px;
-  background: #ebebeb url("../img/about/fon2.jpg") no-repeat center/contain; }
+  background: #ebebeb url("../img/about/fon2.jpg") no-repeat center/auto 100%; }
   .about__target-title {
     width: 60%;
     font-weight: 600;
