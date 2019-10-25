@@ -3,7 +3,7 @@ body, html {
 
 .first--screen {
   display: grid;
-  grid-template-areas: 'logo img img img img year' 'mouse . brand brand . year';
+  grid-template-areas: 'logo img img img img year' 'mouse . brand brand . .';
   grid-template-rows: 1fr;
   grid-template-columns: repeat(6, 1fr);
   width: 100%;
@@ -31,7 +31,61 @@ body, html {
   .first--screen__year {
     position: relative;
     grid-area: year;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .first--screen__year-block {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 0.8vw;
+      line-height: 1em;
+      text-align: center;
+      letter-spacing: 1em;
+      text-transform: uppercase;
+      color: #ffffff;
+      background: #282C34;
+      padding: 1vw 1.5vw;
+      -webkit-transform: translate(3vw, 18vw) rotate(-90deg);
+          -ms-transform: translate(3vw, 18vw) rotate(-90deg);
+              transform: translate(3vw, 18vw) rotate(-90deg); }
+    .first--screen__year-wrap {
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      height: 0;
+      width: 0; }
+    .first--screen__year-span {
+      text-transform: uppercase;
+      font-size: 18vw;
+      font-weight: bold;
+      height: 1000px;
+      width: 1000px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      text-align: center;
+      -webkit-transform-origin: center center;
+          -ms-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-transform: translate(calc(-50% + -7vw), -50%) rotate(-90deg);
+          -ms-transform: translate(calc(-50% + -7vw), -50%) rotate(-90deg);
+              transform: translate(calc(-50% + -7vw), -50%) rotate(-90deg); }
     .first--screen__year-num {
       position: absolute;
       top: 50%;

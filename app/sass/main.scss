@@ -142,11 +142,13 @@
 }
 
 .project__name__os-2{
-  width: 80%;
+  width: 85%;
   margin-left: 15%;
 }
+
 .project__name__os-3{
-  width: 100%;
+  width: 92.5%;
+  margin-left: 7.5%;
 }
 .project__name h3{
   display: flex;
@@ -155,6 +157,6 @@
 .title__block{
   height: 3.4vw;
   flex-grow: 1;
-  margin-right: -3px;
+  margin: 0 -3px 0 80px;
   border :3px solid #282C34;
 }

@@ -9,7 +9,7 @@ body, html {
 .first--screen{
   display: grid;
   grid-template-areas: 'logo img img img img year'
-  'mouse . brand brand . year';
+  'mouse . brand brand . .';
   grid-template-rows: 1fr;
   grid-template-columns: repeat(6, 1fr);
   width: 100%;
@@ -32,6 +32,47 @@ body, html {
     position: relative;
     grid-area: year;
     text-transform: uppercase;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-block{
+      display: inline-block;
+      position: absolute;
+      top:0;
+      right: 0;
+      font-size: 0.8vw;
+      line-height: 1em;
+      text-align: center;
+      letter-spacing: 1em;
+      text-transform: uppercase;
+      color: #ffffff;
+      background: #282C34;
+      //padding: 14px 20px;
+      padding: 1vw 1.5vw;
+      transform: translate(3vw, 18vw) rotate(-90deg);
+    }
+    &-wrap{
+      position: relative;
+      display: flex;
+      height: 0;
+      width: 0;
+    }
+    &-span{
+      //position: relative;
+      text-transform: uppercase;
+      font-size: 18vw;
+      font-weight: bold;
+      height: 1000px;
+      width: 1000px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transform-origin: center center;
+      transform: translate(calc(-50% + -7vw), -50%) rotate(-90deg);
+    }
     &-num{
       position: absolute;
       top: 50%;
