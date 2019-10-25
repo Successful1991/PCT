@@ -5,7 +5,8 @@
     visibility: visible; }
   to {
     -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); } }
+            transform: translate3d(0, 0, 0);
+    visibility: visible; } }
 
 @keyframes slideInDown {
   from {
@@ -14,7 +15,8 @@
     visibility: visible; }
   to {
     -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); } }
+            transform: translate3d(0, 0, 0);
+    visibility: visible; } }
 
 .slideInDown {
   -webkit-animation-name: slideInDown;
@@ -29,7 +31,8 @@
   to {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
-    z-index: 1; } }
+    z-index: 1;
+    visibility: visible; } }
 
 @keyframes slideInLeft {
   from {
@@ -40,7 +43,8 @@
   to {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
-    z-index: 1; } }
+    z-index: 1;
+    visibility: visible; } }
 
 .slideInLeft {
   -webkit-animation-name: slideInLeft;
@@ -53,7 +57,8 @@
     visibility: visible; }
   to {
     -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); } }
+            transform: translate3d(0, 0, 0);
+    visibility: visible; } }
 
 @keyframes slideInRight {
   from {
@@ -62,7 +67,8 @@
     visibility: visible; }
   to {
     -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); } }
+            transform: translate3d(0, 0, 0);
+    visibility: visible; } }
 
 .slideInRight {
   -webkit-animation-name: slideInRight;
@@ -75,7 +81,8 @@
     visibility: visible; }
   to {
     -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); } }
+            transform: translate3d(0, 0, 0);
+    visibility: visible; } }
 
 @keyframes slideInUp {
   from {
@@ -84,7 +91,8 @@
     visibility: visible; }
   to {
     -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); } }
+            transform: translate3d(0, 0, 0);
+    visibility: visible; } }
 
 .slideInUp {
   -webkit-animation-name: slideInUp;
@@ -157,3 +165,19 @@
 .ease-out {
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out; }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    visibility: visible; }
+  to {
+    opacity: 1;
+    visibility: visible; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    visibility: visible; }
+  to {
+    opacity: 1;
+    visibility: visible; } }

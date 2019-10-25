@@ -1,4 +1,4 @@
-new WOW().init();
+
 
 
 $(function () {
@@ -8,8 +8,8 @@ $(function () {
         ajax_form(e,"POST","/wp-content/themes/heliview/includes/application.php");
 
     });
-
-
+    // new WOW().init();
+    scrollInit();
 });
 
 function initMap() {
@@ -243,3 +243,70 @@ function replaceText(block){
     });
 }
 
+var arr = [];
+function scrollInit() {
+    // var arr = [{name:'.project__img-4',offset: 50},{name:'.project__img-6',offset: 150},{name:'.project__img-8',offset: 250}];
+    var list = document.querySelectorAll('.my-wow');
+    list.forEach(function (el) {
+       var t = {};
+       var duration = $(el).data('duration');
+       var offset = $(el).data('offset');
+       var delay = $(el).data('delay');
+       var animate =  $(el).data('animate');
+        t.duration = duration ? duration : '0s';
+        t.offset = offset ? offset*-1 : '50';
+        t.delay = delay ? delay : '0s';
+        t.animate = animate ? animate : 'fadeIn';
+       t.element = el;
+       arr.push(t);
+    });
+
+    $('body').mCustomScrollbar({
+        theme: "dark",
+        scrollInertia: 1500,
+        mouseWheel:{
+            deltaFactor: 40,
+            normalizeDelta: false
+        },
+        scrollbarPosition: "inside",
+//      scrollbarPosition: "outside",
+        documentTouchScroll: false,
+        contentTouchScroll: 25,
+        callbacks:{
+            whileScrolling:function(){
+                scroll();
+                // var height =  $(document).height();
+                // arr.forEach(function (el,i) {
+                //     if($(el.element).offset().top - height <= Number(el.offset)) {
+                //         $(el.element).css({
+                //             'visibility': 'visible',
+                //             'animation-name': el.animate,
+                //             'animation-duration': el.duration,
+                //         });
+                //         arr.splice(i,1);
+                //     }
+                // });
+            },
+            onInit:function(){
+                scroll();
+            }
+
+        }
+    });
+}
+
+function scroll() {
+    var height =  $(document).height();
+    arr.forEach(function (el,i) {
+        if($(el.element).offset().top - height <= Number(el.offset)) {
+            $(el.element).css({
+                // 'visibility': 'visible',
+                'animation-name': el.animate,
+                'animation-duration': el.duration,
+                'animation-delay': el.delay,
+                'animation-fill-mode': 'forwards'
+            });
+            arr.splice(i,1);
+        }
+    });
+}

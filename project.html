@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="app/css/reset.css">
+    <link rel="stylesheet" href="./app/js/libs/scroll/jquery.mCustomScrollbar.min.css" />
     <link rel="stylesheet" href="app/css/main.css">
     <link rel="stylesheet" href="app/css/project.css">
     <title>TEST</title>
@@ -53,50 +54,83 @@
 
     <section class="first--screen">
         <div class="first--screen__logo"><img src="./app/img/brand/zara.svg" alt="zara"></div>
-        <div class="first--screen__img"><img src="./app/img/project/zara/Rectangle.jpg" alt="Rectangle"></div>
+        <div class="first--screen__img"><img src="./app/img/project/zara/Rectangle.jpg" alt="Rectangle" class="my-wow" data-duration="1s" data-offset="0"></div>
         <div class="first--screen__year">
             <img class="first--screen__year-num" src="./app/img/project/2018.png" alt="2018">
         </div>
-        <div class="first--screen__mouse"><img src="./app/img/Mouse.jpg" alt="mouse"></div>
+        <div class="first--screen__mouse"><svg width="15" height="35" viewBox="0 0 15 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.5 0C3.36085 0 0 3.49042 0 7.78914V15.2109C0 19.5096 3.36085 23 7.5 23C11.6392 23 15 19.5096 15 15.2109V7.78914C15 3.49042 11.6392 0 7.5 0ZM12.8774 15.2109C12.8774 18.2971 10.4717 20.7955 7.5 20.7955C4.5283 20.7955 2.12264 18.2971 2.12264 15.2109V7.78914C2.12264 4.70288 4.5283 2.20447 7.5 2.20447C10.4717 2.20447 12.8774 4.70288 12.8774 7.78914V15.2109Z" fill="#282C34"/>
+            <path d="M7.5 5C6.65 5 6 5.46099 6 6.06383V8.93617C6 9.53901 6.65 10 7.5 10C8.35 10 9 9.53901 9 8.93617V6.06383C9 5.49645 8.35 5 7.5 5Z" fill="#282C34"/>
+            <path d="M9.94737 24.3361L7.5 26.9407L5.05263 24.3774C4.57895 23.8813 3.82895 23.8813 3.35526 24.3774C2.88158 24.8735 2.88158 25.659 3.35526 26.1551L6.67105 29.6279C6.9079 29.876 7.22368 30 7.5 30C7.77632 30 8.0921 29.876 8.32895 29.6279L11.6447 26.1551C12.1184 25.659 12.1184 24.8735 11.6447 24.3774C11.1711 23.8813 10.4211 23.8813 9.94737 24.3361Z" fill="#282C34"/>
+            <path d="M9.94737 30.3103L7.5 32.4483L5.05263 30.3103C4.57895 29.8966 3.82895 29.8966 3.35526 30.3103C2.88158 30.7241 2.88158 31.3793 3.35526 31.7931L6.67105 34.6897C6.9079 34.8966 7.22368 35 7.5 35C7.77632 35 8.0921 34.8966 8.32895 34.6897L11.6447 31.7931C12.1184 31.3793 12.1184 30.7241 11.6447 30.3103C11.1711 29.8966 10.4211 29.8966 9.94737 30.3103Z" fill="#282C34"/>
+        </svg></div>
         <div class="first--screen__brand">zara</div>
     </section>
     <div class="project__name">
-        <img class="project__name-img" src="./app/img/Project.png" alt="project">
-        <h1>проект</h1>
+        <div class="project__name__os-1">
+            <h3>
+                <span class="text-left text-stroke"><span class="my-wow" data-animate="slideInRight" data-duration="0.7s" data-offset="150">П</span></span>
+                <span class="text-left"><span class="my-wow" data-animate="slideInRight" data-duration="0.7s" data-offset="150">Р</span></span>
+                <span class="text-left"><span class="my-wow" data-animate="slideInRight" data-duration="0.7s" data-offset="150">О</span></span>
+                <span class="title__block"></span>
+            </h3>
+        </div>
+        <div class="project__name__os-2">
+            <h3>
+                <span class="text-left"><span class="my-wow" data-animate="slideInRight" data-duration="0.7s" data-offset="150" data-delay="0">Е</span></span>
+                <span class="text-left"><span class="my-wow" data-animate="slideInRight" data-duration="0.7s" data-offset="150" data-delay="0.2s">К</span></span>
+                <span class="text-left"><span class="my-wow" data-animate="slideInRight" data-duration="0.7s" data-offset="150" data-delay="0.4s">Т</span></span>
+            </h3>
+        </div>
+        <div class="project__name__os-3">
+            <h3>
+                <span class="text-left"><span class="my-wow" data-animate="slideInRight" data-duration="0.7s" data-offset="150" data-delay="0">Е</span></span>
+                <span class="text-left"><span class="my-wow" data-animate="slideInRight" data-duration="0.7s" data-offset="150" data-delay="0.2s">К</span></span>
+                <span class="text-left"><span class="my-wow" data-animate="slideInRight" data-duration="0.7s" data-offset="150" data-delay="0.4s">Т</span></span>
+            </h3>
+        </div>
     </div>
-<div class="project">
-    <img class="project__img project__img-1" src="./app/img/project/zara/1.jpg" alt="1">
-    <div class="project__info">
 
-        <table>
-            <tr>
-                <td>Клієнт:</td>
-                <td>Zara</td>
-            </tr>
-            <tr>
-                <td>Розміщення:</td>
-                <td>Smart Plaza (Київ)</td>
-            </tr>
-            <tr>
-                <td>Площа:</td>
-                <td>713 m2</td>
-            </tr>
-            <tr>
-                <td>Рік:</td>
-                <td>2018</td>
-            </tr>
-        </table>
+
+
+<div class="project">
+    <img class="my-wow project__img project__img-1" src="./app/img/project/zara/1.jpg" alt="1" data-duration="0.5s" data-offset="50">
+    <div class="project__year-wrap">
+        <div class="project__info project__year">
+            <div class="project__info-name project__text-block"><span>рік</span></div>
+            <div class="project__info-number text-stroke">2018</div>
+        </div>
     </div>
-    <img class="project__img project__img-2" src="./app/img/project/zara/2.jpg" alt="1">
-    <img class="project__img project__img-3" src="./app/img/project/zara/3.jpg" alt="2">
-    <img class="project__img project__img-4" src="./app/img/project/zara/4.jpg" alt="1">
-    <img class="project__img project__img-5" src="./app/img/project/zara/5.jpg" alt="1">
-    <img class="project__img project__img-6" src="./app/img/project/zara/6.jpg" alt="1">
-    <img class="project__img project__img-7" src="./app/img/project/zara/7.jpg" alt="1">
-    <img class="project__img project__img-8" src="./app/img/project/zara/8.jpg" alt="1">
-    <img class="project__img project__img-9" src="./app/img/project/zara/9.jpg" alt="1">
-    <img class="project__img project__img-10" src="./app/img/project/zara/10.jpg" alt="1">
-    <img class="project__img project__img-11" src="./app/img/project/zara/11.jpg" alt="1">
+    <div class="project__brand-wrap">
+        <div class="project__info project__brand">
+            <div class="project__info-name project__text-block"><span>клиент</span></div>
+            <div class="project__info-text">zara</div>
+        </div>
+    </div>
+    <div class="project__siting-wrap">
+        <div class="project__info project__siting">
+            <div class="project__info-name project__text-block"><span>Розміщення</span></div>
+            <div class="project__info-text">Smart<br>
+                Plaza<br>
+                (Київ)</div>
+        </div>
+    </div>
+    <div class="project__area-wrap">
+        <div class="project__info project__area">
+            <div class="project__info-name project__text-block"><span>Площа м2</span></div>
+            <div class="project__info-number text-stroke">567</div>
+        </div>
+    </div>
+    <img class="my-wow project__img project__img-2"  src="./app/img/project/zara/2.jpg"  alt="1" data-animate="slideInUp" data-duration="1s" data-offset="250">
+    <img class="my-wow project__img project__img-3"  src="./app/img/project/zara/3.jpg"  alt="2" data-animate="slideInUp" data-duration="1.1s" data-offset="200">
+    <img class="my-wow project__img project__img-4"  src="./app/img/project/zara/4.jpg"  alt="1" data-animate="slideInUp" data-duration="2.2s" data-offset="200">
+    <img class="my-wow project__img project__img-5"  src="./app/img/project/zara/5.jpg"  alt="1" data-animate="slideInUp" data-duration="0.5s" data-offset="250">
+    <img class="my-wow project__img project__img-6"  src="./app/img/project/zara/6.jpg"  alt="1" data-animate="slideInLeft" data-duration="1s" data-offset="250">
+    <img class="my-wow project__img project__img-7"  src="./app/img/project/zara/7.jpg"  alt="1" data-animate="slideInUp" data-duration="1.2s" data-offset="250">
+    <img class="my-wow project__img project__img-8"  src="./app/img/project/zara/8.jpg"  alt="1" data-animate="slideInRight" data-duration="1.4s" data-offset="250">
+    <img class="my-wow project__img project__img-9"  src="./app/img/project/zara/9.jpg"  alt="1" data-animate="slideInUp" data-duration="1.5s" data-offset="200">
+    <img class="my-wow project__img project__img-10" src="./app/img/project/zara/10.jpg" alt="1" data-animate="slideInUp" data-duration="1.7s" data-offset="200">
+    <img class="my-wow project__img project__img-11" src="./app/img/project/zara/11.jpg" alt="1" data-animate="slideInUp" data-duration="1.6s" data-offset="250">
 </div>
 
 
@@ -114,6 +148,14 @@
 </footer>
 <script src="app/js/libs/jquery.min.js"></script>
 <script src="app/js/libs/wow.min.js"></script>
+<script src="app/js/libs/scroll/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="app/js/index.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.title__svg').addClass('animate');
+
+
+    });
+</script>
 </body>
 </html>

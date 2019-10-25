@@ -22,6 +22,13 @@
   src: url("../fonts/montserratSemiBold/montserrat-SemiBold.eot");
   src: url("../fonts/montserratSemiBold/montserrat-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/montserratSemiBold/montserrat-SemiBold.woff") format("woff"), url("../fonts/montserratSemiBold/montserrat-SemiBold.ttf") format("truetype"); }
 
+@font-face {
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-style: "normal";
+  src: url("../fonts/montserratBold/montserrat-Bold.eot");
+  src: url("../fonts/montserratBold/montserrat-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/montserratBold/montserrat-Bold.woff") format("woff"), url("../fonts/montserratBold/montserrat-Bold.ttf") format("truetype"); }
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -165,7 +172,8 @@ body {
     visibility: visible; }
   to {
     -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); } }
+            transform: translate3d(0, 0, 0);
+    visibility: visible; } }
 
 @keyframes slideInDown {
   from {
@@ -174,7 +182,8 @@ body {
     visibility: visible; }
   to {
     -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); } }
+            transform: translate3d(0, 0, 0);
+    visibility: visible; } }
 
 .slideInDown {
   -webkit-animation-name: slideInDown;
@@ -189,7 +198,8 @@ body {
   to {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
-    z-index: 1; } }
+    z-index: 1;
+    visibility: visible; } }
 
 @keyframes slideInLeft {
   from {
@@ -200,7 +210,8 @@ body {
   to {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
-    z-index: 1; } }
+    z-index: 1;
+    visibility: visible; } }
 
 .slideInLeft {
   -webkit-animation-name: slideInLeft;
@@ -213,7 +224,8 @@ body {
     visibility: visible; }
   to {
     -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); } }
+            transform: translate3d(0, 0, 0);
+    visibility: visible; } }
 
 @keyframes slideInRight {
   from {
@@ -222,7 +234,8 @@ body {
     visibility: visible; }
   to {
     -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); } }
+            transform: translate3d(0, 0, 0);
+    visibility: visible; } }
 
 .slideInRight {
   -webkit-animation-name: slideInRight;
@@ -235,7 +248,8 @@ body {
     visibility: visible; }
   to {
     -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); } }
+            transform: translate3d(0, 0, 0);
+    visibility: visible; } }
 
 @keyframes slideInUp {
   from {
@@ -244,7 +258,8 @@ body {
     visibility: visible; }
   to {
     -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); } }
+            transform: translate3d(0, 0, 0);
+    visibility: visible; } }
 
 .slideInUp {
   -webkit-animation-name: slideInUp;
@@ -317,6 +332,22 @@ body {
 .ease-out {
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out; }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    visibility: visible; }
+  to {
+    opacity: 1;
+    visibility: visible; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    visibility: visible; }
+  to {
+    opacity: 1;
+    visibility: visible; } }
 
 .main {
   display: grid;
@@ -433,3 +464,35 @@ body {
 .text-stroke {
   color: transparent;
   -webkit-text-stroke: 3px #282C34; }
+
+.mCSB_scrollTools {
+  width: 2px; }
+
+.mCSB_inside > .mCSB_container {
+  margin-right: 2px; }
+
+.project__name__os-1 {
+  width: 100%; }
+
+.project__name__os-2 {
+  width: 80%;
+  margin-left: 15%; }
+
+.project__name__os-3 {
+  width: 100%; }
+
+.project__name h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.title__block {
+  height: 3.4vw;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-right: -3px;
+  border: 3px solid #282C34; }
