@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="app/css/reset.css">
-    <link rel="stylesheet" href="app/css/font.css">
+    <link rel="stylesheet" href="./app/js/libs/scroll/jquery.mCustomScrollbar.min.css" />
     <link rel="stylesheet" href="app/css/main.css">
     <title>TEST</title>
 </head>
@@ -49,10 +49,9 @@
             </div>
         </div>
     </div>
-
 </header>
 <section class="main">
-    <a href="#" class="wow ease-in slideInDown stores oysho" data-wow-duration="0.4s">
+    <a href="#" class="my-wow ease-in stores oysho" data-animate="slideInDown" data-duration="0.4s" data-offset="150">
         <img src="./app/img/main/oysho.jpg" alt="">
         <div class="stores-hover oysho-hover">
             <span class="stores-hover__brand">oysho</span>
@@ -60,7 +59,7 @@
             <span class="stores-hover__text">смотреть проект</span>
         </div>
     </a>
-    <a href="#" class="wow ease-out slideInRight stores zara" data-wow-duration="0.6s">
+    <a href="#" class="my-wow ease-out stores zara" data-animate="slideInRight" data-duration="0.6s" data-offset="150">
         <img src="./app/img/main/zara.jpg" alt="">
         <div class="stores-hover zara-hover">
             <span class="stores-hover__brand">zara</span>
@@ -68,58 +67,56 @@
             <span class="stores-hover__text">смотреть проект</span>
         </div>
     </a>
-    <a href="#" class="stores massimo">
-    <!--<a href="#" class="wow ease flipInX stores massimo" data-wow-duration="0.8s">-->
-        <!--<img src="./app/img/main/massimo.jpg" alt="">-->
-        <img class="wow ease flipInX" data-wow-duration="0.8s" src="./app/img/main/massimo.jpg" alt="">
+    <a href="#" class="my-wow ease stores massimo" data-duration="0.8s" data-animate="flipInX" data-offset="150">
+        <img  src="./app/img/main/massimo.jpg" alt="massimo">
         <div class="stores-hover massimo-hover">
             <span class="stores-hover__brand">massimo</span>
             <div class="stores-hover__plus"></div>
             <span class="stores-hover__text">смотреть проект</span>
         </div>
     </a>
-    <a href="#" class="wow ease-in slideInUp stores pullbear" data-wow-duration="0.7s">
-        <img src="./app/img/main/pullbear.jpg" alt="">
+    <a href="#" class="my-wow ease-in stores pullbear" data-animate="slideInUp" data-duration="0.7s" data-offset="150">
+        <img src="./app/img/main/pullbear.jpg" alt="pullbear">
         <div class="stores-hover pullbear-hover">
             <span class="stores-hover__brand">pullbear</span>
             <div class="stores-hover__plus"></div>
             <span class="stores-hover__text">смотреть проект</span>
         </div>
     </a>
-    <a href="#" class="wow ease slideInLeft stores bershka" data-wow-duration="1s">
-        <img src="./app/img/main/bershka.jpg" alt="">
+    <a href="#" class="my-wow ease stores bershka" data-animate="slideInLeft" data-duration="1s" data-offset="150">
+        <img src="./app/img/main/bershka.jpg" alt="bershka">
         <div class="stores-hover bershka-hover">
             <span class="stores-hover__brand">bershka</span>
             <div class="stores-hover__plus"></div>
             <span class="stores-hover__text">смотреть проект</span>
         </div>
     </a>
-    <a href="#" class="wow ease-out slideInLeft stores piraeus" data-wow-duration="0.6s">
-        <img src="./app/img/main/piraeus.jpg" alt="">
+    <a href="#" class="my-wow ease-out stores piraeus" data-animate="slideInLeft" data-duration="0.6s" data-offset="150">
+        <img src="./app/img/main/piraeus.jpg" alt="piraeus">
         <div class="stores-hover piraeus-hover">
             <span class="stores-hover__brand">piraeus</span>
             <div class="stores-hover__plus"></div>
             <span class="stores-hover__text">смотреть проект</span>
         </div>
     </a>
-    <a href="#" class="wow ease-in flipInX stores stradivarius" data-wow-duration="0.8s">
-        <img src="./app/img/main/stradivarius.jpg" alt="">
+    <a href="#" class="my-wow ease-in stores stradivarius" data-animate="flipInX" data-duration="0.8s" data-offset="150">
+        <img src="./app/img/main/stradivarius.jpg" alt="stradivarius">
         <div class="stores-hover stradivarius-hover">
             <span class="stores-hover__brand">stradivarius</span>
             <div class="stores-hover__plus"></div>
             <span class="stores-hover__text">смотреть проект</span>
         </div>
     </a>
-    <a href="#" class="wow ease-out slideInRight stores eres" data-wow-duration="0.7s">
-        <img src="./app/img/main/eres.jpg" alt="">
+    <a href="#" class="my-wow ease-out stores eres" data-animate="slideInRight" data-duration="0.7s" data-offset="150">
+        <img src="./app/img/main/eres.jpg" alt="eres">
         <div class="stores-hover eres-hover">
             <span class="stores-hover__brand">eres</span>
             <div class="stores-hover__plus"></div>
             <span class="stores-hover__text">смотреть проект</span>
         </div>
     </a>
-    <a href="#" class="wow ease slideInUp stores universal" data-wow-duration="0.6s">
-        <img src="./app/img/main/universal.jpg" alt="">
+    <a href="#" class="my-wow ease stores universal" data-animate="slideInUp" data-duration="0.6s" data-offset="150">
+        <img src="./app/img/main/universal.jpg" alt="universal">
         <div class="stores-hover universal-hover">
             <span class="stores-hover__brand">universal</span>
             <div class="stores-hover__plus"></div>
@@ -140,7 +137,8 @@
 
 </footer>
 <script src="app/js/libs/jquery.min.js"></script>
-<script src="app/js/libs/wow.min.js"></script>
+<script src="app/js/libs/scroll/jquery.mCustomScrollbar.concat.min.js"></script>
+<!--<script src="app/js/libs/wow.min.js"></script>-->
 <script src="app/js/index.js"></script>
 </body>
 </html>

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="app/css/project.css">
     <title>TEST</title>
 </head>
-<body>
+<body class="body">
 <header class="header">
     <div class="header__wrap">
         <div class="header__left">
@@ -63,7 +63,6 @@
                 </span>
                 <span class="first--screen__year-block">рік</span>
             </div>
-            <!--<img class="first&#45;&#45;screen__year-num" src="./app/img/project/2018.png" alt="2018">-->
         </div>
         <div class="first--screen__mouse"><svg width="15" height="35" viewBox="0 0 15 35" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M7.5 0C3.36085 0 0 3.49042 0 7.78914V15.2109C0 19.5096 3.36085 23 7.5 23C11.6392 23 15 19.5096 15 15.2109V7.78914C15 3.49042 11.6392 0 7.5 0ZM12.8774 15.2109C12.8774 18.2971 10.4717 20.7955 7.5 20.7955C4.5283 20.7955 2.12264 18.2971 2.12264 15.2109V7.78914C2.12264 4.70288 4.5283 2.20447 7.5 2.20447C10.4717 2.20447 12.8774 4.70288 12.8774 7.78914V15.2109Z" fill="#282C34"/>
@@ -76,8 +75,8 @@
 
 
 <!--  сюда подключать нужную разметку в зависимости от языка -->
-    <div class="project__name">
-        <div class="project__name__os-1">
+    <div class="title__name">
+        <div class="title__name__os-1">
             <h3>
                 <span class="text-left text-stroke"><span class="my-wow" data-animate="slideInRight" data-duration="0.7s" data-offset="150">П</span></span>
                 <span class="text-left"><span class="my-wow" data-animate="slideInRight" data-duration="0.7s" data-offset="150">Р</span></span>
@@ -85,7 +84,7 @@
                 <span class="title__block"></span>
             </h3>
         </div>
-        <div class="project__name__os-2">
+        <div class="title__name__os-2">
             <h3>
                 <span class="text-left"><span class="my-wow" data-animate="slideInRight" data-duration="0.7s" data-offset="150" data-delay="0">Е</span></span>
                 <span class="text-left"><span class="my-wow" data-animate="slideInRight" data-duration="0.7s" data-offset="150" data-delay="0.2s">К</span></span>
@@ -93,10 +92,7 @@
             </h3>
         </div>
     </div>
-
-
-
-<div class="project">
+    <div class="project">
     <img class="my-wow ease-out project__img project__img-1" src="./app/img/project/zara/1.jpg" alt="1" data-duration="0.5s" data-offset="50">
     <div class="my-wow ease-out project__year-wrap" data-animate="fadeInUp" data-duration="1s" data-offset="250">
         <div class="project__info project__year">
@@ -150,15 +146,12 @@
 
 </footer>
 <script src="app/js/libs/jquery.min.js"></script>
-<script src="app/js/libs/wow.min.js"></script>
 <script src="app/js/libs/scroll/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="app/js/index.js"></script>
-<script>
-    $(document).ready(function () {
-        $('.title__svg').addClass('animate');
-
-
-    });
-</script>
+<!--<script>-->
+<!--//    $(document).ready(function () {-->
+<!--//        $('.title__svg').addClass('animate');-->
+<!--//    });-->
+<!--</script>-->
 </body>
 </html>

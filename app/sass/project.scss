@@ -3,9 +3,7 @@
   justify-content: center;
   align-items: center;
 }
-body, html {
-  height: 100%;
-}
+
 .first--screen{
   display: grid;
   grid-template-areas: 'logo img img img img year'
@@ -49,7 +47,6 @@ body, html {
       text-transform: uppercase;
       color: #ffffff;
       background: #282C34;
-      //padding: 14px 20px;
       padding: 1vw 1.5vw;
       transform: translate(3vw, 18vw) rotate(-90deg);
     }
@@ -60,7 +57,6 @@ body, html {
       width: 0;
     }
     &-span{
-      //position: relative;
       text-transform: uppercase;
       font-size: 18vw;
       font-weight: bold;
@@ -103,19 +99,7 @@ body, html {
     }
   }
 }
-.project__name{
-  z-index: 2;
-  position: relative;
-  font-family: 'Montserrat';
-  font-weight: bold;
-  color: #282C34;
-  text-transform: uppercase;
-  span{
-    display: inline-block;
-    font-size: 18vw;
-    line-height: 0.8em;
-  }
-}
+
 .project{
   position: relative;
   display: grid;
@@ -271,14 +255,5 @@ body, html {
     margin: 0 auto;
   }
 }
-.my-wow{
-  visibility: hidden;
-  //opacity: 0;
-}
 
-
-.text-left{
-  position: relative;
-  overflow: hidden;
-}
 

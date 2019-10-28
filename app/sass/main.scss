@@ -3,6 +3,17 @@
 @import "header";
 @import "footer";
 @import "animate";
+body, html {
+  height: 100%;
+}
+.my-wow{
+  visibility: hidden;
+}
+
+.text-left{
+  position: relative;
+  overflow: hidden;
+}
 
 .main {
   display: grid;
@@ -137,20 +148,20 @@
 .mCSB_inside>.mCSB_container{
   margin-right: 2px;
 }
-.project__name__os-1{
+.title__name__os-1{
   width: 100%;
 }
 
-.project__name__os-2{
+.title__name__os-2{
   width: 85%;
   margin-left: 15%;
 }
 
-.project__name__os-3{
+.title__name__os-3{
   width: 92.5%;
   margin-left: 7.5%;
 }
-.project__name h3{
+.title__name h3{
   display: flex;
   align-items: center;
 }
@@ -159,4 +170,17 @@
   flex-grow: 1;
   margin: 0 -3px 0 80px;
   border :3px solid #282C34;
+}
+.title__name{
+  z-index: 2;
+  position: relative;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  color: #282C34;
+  text-transform: uppercase;
+  span{
+    display: inline-block;
+    font-size: 18vw;
+    line-height: 0.8em;
+  }
 }

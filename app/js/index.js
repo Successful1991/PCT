@@ -1,15 +1,10 @@
-
-
-
-$(function () {
-    // initMap();
+$(document).ready(function () {
     $('.form__submit').on('click', function (e) {
         e.preventDefault();
         ajax_form(e,"POST","/wp-content/themes/heliview/includes/application.php");
-
     });
-    // new WOW().init();
     scrollInit();
+    scroll();
 });
 
 function initMap() {
@@ -160,7 +155,6 @@ function initMap() {
     });
 }
 
-
 function ajax_form(e,methods,url) {
     event.preventDefault();
     var form = $(e.target).closest("form");
@@ -244,8 +238,26 @@ function replaceText(block){
 }
 
 var arr = [];
+function scroll() {
+    if(arr.length > 0){
+        var height =  $(document).height();
+        arr = arr.filter(function (el) {
+            if($(el.element).offset().top - height <= Number(el.offset)) {
+                $(el.element).css({
+                    // 'visibility': 'visible',
+                    'animation-name': el.animate,
+                    'animation-duration': el.duration,
+                    'animation-delay': el.delay,
+                    'animation-fill-mode': 'forwards'
+                });
+                return false
+            } else {return el}
+        })
+    }
+
+}
 function scrollInit() {
-    // var arr = [{name:'.project__img-4',offset: 50},{name:'.project__img-6',offset: 150},{name:'.project__img-8',offset: 250}];
+
     var list = document.querySelectorAll('.my-wow');
     list.forEach(function (el) {
        var t = {};
@@ -260,7 +272,6 @@ function scrollInit() {
        t.element = el;
        arr.push(t);
     });
-
     $('body').mCustomScrollbar({
         theme: "dark",
         scrollInertia: 1500,
@@ -274,39 +285,11 @@ function scrollInit() {
         contentTouchScroll: 25,
         callbacks:{
             whileScrolling:function(){
+                console.log('event');
                 scroll();
-                // var height =  $(document).height();
-                // arr.forEach(function (el,i) {
-                //     if($(el.element).offset().top - height <= Number(el.offset)) {
-                //         $(el.element).css({
-                //             'visibility': 'visible',
-                //             'animation-name': el.animate,
-                //             'animation-duration': el.duration,
-                //         });
-                //         arr.splice(i,1);
-                //     }
-                // });
             },
-            onInit:function(){
-                scroll();
-            }
-
         }
     });
 }
 
-function scroll() {
-    var height =  $(document).height();
-    arr.forEach(function (el,i) {
-        if($(el.element).offset().top - height <= Number(el.offset)) {
-            $(el.element).css({
-                // 'visibility': 'visible',
-                'animation-name': el.animate,
-                'animation-duration': el.duration,
-                'animation-delay': el.delay,
-                'animation-fill-mode': 'forwards'
-            });
-            arr.splice(i,1);
-        }
-    });
-}
+
