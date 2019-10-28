@@ -1,0 +1,120 @@
+.services{
+  min-height: calc(100vh - var(--header-h) - 90px);
+  &__tabs{
+    position: relative;
+    background: #EFF1F4;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    margin: -1.5vw 0 0 0;
+  }
+  .title__name{
+    z-index: -1;
+  }
+  .title__name h3{
+    justify-content: center;
+  }
+}
+.tabs{
+  &__buttons{
+    display: flex;
+    justify-content: flex-start;
+  }
+  &__button{
+    width: 33.33%;
+    flex-grow: 1;
+    height: 50px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    color: #282C34;
+    transition: all 0.3s;
+    &.active{
+      background: var(--red);
+      color: white;
+    }
+  };
+  &__content{
+    height: 740px;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.6em;
+    padding: 40px;
+    &-wrap{
+      position: relative;
+      height: 100%;
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+        width: 3px;
+      }
+      &::-webkit-scrollbar-track {
+        -webkit-box-shadow: none;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #DE3346;
+        border-radius: 30px;
+      }
+    }
+    &-filter{
+      position: absolute;
+      bottom: 0;
+      left:0;
+      right: 0;
+      height: 40%;
+      background: linear-gradient(0deg, #EFF1F4 0%, rgba(239, 241, 244, 0) 100%);
+    }
+  }
+  &__cleaning{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    p{
+      margin-bottom: 25px;
+    }
+  }
+  &__cont{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    z-index: 0;
+  }
+}
+.tabs__cleaning.active{
+  opacity: 1;
+  z-index: 5;
+}
+
+.cleaning{
+  &__left{
+    width: 60%;
+  }
+  &__right{
+    width: 40%;
+    padding: 0 20px;
+    &::-webkit-scrollbar {
+      width: 3px;
+    }
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: none;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #DE3346;
+      border-radius: 30px;
+    }
+    &-advantages{
+      height: 400px;
+      font-size: 18px;
+      line-height: 1.4em;
+      padding-left: 20px;
+      list-style: disc;
+      overflow-y: auto;
+    }
+  }
+}

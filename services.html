@@ -7,8 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="app/css/reset.css">
     <link rel="stylesheet" href="./app/js/libs/scroll/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="app/css/menu.css" />
     <link rel="stylesheet" href="app/css/main.css">
-    <link rel="stylesheet" href="app/css/projects.css">
+    <link rel="stylesheet" href="app/css/services.css">
     <title>TEST</title>
 </head>
 <body>
@@ -40,7 +41,7 @@
         </div>
         <a href="#" class="header__logo"><img src="./app/img/Logo.svg" alt="logo"></a>
         <div class="header__right">
-            <div class="header__menu">
+            <div class="header__menu js-header__menu">
                 <div class="header__menu-left">menu</div>
                 <div class="header__menu-right">
                     <span></span>
@@ -48,130 +49,120 @@
                 </div>
             </div>
         </div>
+
     </div>
 
 </header>
 
-<section class="projects">
+    <nav class="menu">
+    <div class="menu__item menu__item--1" data-direction="bt">
+        <div class="menu__item-inner">
+            <div class="mainmenu">
+                <a href="#" class="mainmenu__item">Головна</a>
+                <a href="#" class="mainmenu__item">Проекти</a>
+                <a href="#" class="mainmenu__item">Послуги</a>
+                <a href="#" class="mainmenu__item">Про нас</a>
+                <a href="#" class="mainmenu__item">Контакти</a>
+            </div>
+            <p class="label label--topleft label--vert-mirror">Будівельна компанія</p>
+            <p class="label label--bottomright label--vert">+38 (053) 26-93-905</p>
+        </div>
+    </div>
+    <div class="menu__item menu__item--2" data-direction="lr">
+        <div class="menu__item-inner">
+            <div class="menu__item-map"></div>
+            <a href="#" class="menu__item-hoverlink">The location</a>
+        </div>
+    </div>
+    <div class="menu__item menu__item--3" data-direction="bt">
+        <div class="menu__item-inner">
+            <div class="sidemenu">
+                <a href="#" class="sidemenu__item"><span class="sidemenu__item-inner">
+                    <span>Будівніцтво</span>
+                    <span>технічне<br>обслуговування</span>
+                    <span>Клінінг</span>
+                    <span>...</span>
+</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="menu__item menu__item--4" data-direction="rl">
+        <div class="menu__item-inner">
+            <p class="label label--topleft label--line">Контакти</p>
+            <a href="#" class="menu__item-link">Почніть працювати<br>
+                з професійною командою<br>
+                вже сьогодні</a>
+        </div>
+    </div>
+    <div class="menu__item menu__item--5" data-direction="tb">
+        <div class="menu__item-inner">
+            <p class="quote quote-1">Компанія надає всі послуги, які виникають при проведенні будівельно-монтажних робіт.</p>
+            <p class="quote">А також послуги за доглядом за нерухомістю та технічним забезпеченням.</p>
+            <!--<p class="quote">Компанія надає всі послуги, які виникають при проведенні будівельно-монтажних робіт.-->
+            <!--А також послуги за доглядом за нерухомістю та технічним забезпеченням.</p>-->
+        </div>
+    </div>
+    <!--<button class="action action&#45;&#45;menu"><svg class="icon icon&#45;&#45;menu"><path d="M36,8 L36,0 L100,0 L100,8 L36,8 Z M0,8 L0,0 L24,0 L24,8 L0,8 Z M0,28 L0,20 L71,20 L71,28 L0,28 Z"></path></svg></button>-->
+    <button class="action action--close"><svg class="icon icon--close"><path d="M24 1.485L22.515 0 12 10.515 1.485 0 0 1.485 10.515 12 0 22.515 1.485 24 12 13.484 22.515 24 24 22.515 13.484 12z"></path></svg></button>
+</nav>
+
+<section class="services">
     <div class="title__name">
         <div class="title__name__os-1">
             <h3>
                 <span class="text-left text-stroke"><span class="my-wow" data-animate="slideInRight" data-duration="0.7s" data-offset="150">П</span></span>
-                <span class="text-left"><span class="my-wow" data-animate="slideInRight" data-duration="0.7s" data-offset="0">Р</span></span>
                 <span class="text-left"><span class="my-wow" data-animate="slideInRight" data-duration="0.7s" data-offset="0">О</span></span>
-                <span class="title__block"></span>
-            </h3>
-        </div>
-        <div class="title__name__os-2">
-            <h3>
-                <span class="text-left"><span class="my-wow" data-animate="slideInRight" data-duration="0.7s" data-offset="0" data-delay="0">Е</span></span>
-                <span class="text-left"><span class="my-wow" data-animate="slideInRight" data-duration="0.7s" data-offset="0" data-delay="0.2s">К</span></span>
-                <span class="title__block"></span>
-            </h3>
-        </div>
-        <div class="title__name__os-1">
-            <h3>
-                <span class="text-left"><span class="my-wow" data-animate="slideInRight" data-duration="0.7s" data-offset="0" data-delay="0">Т</span></span>
-                <span class="text-left"><span class="my-wow" data-animate="slideInRight" data-duration="0.7s" data-offset="0" data-delay="0.2s">Ы</span></span>
+                <span class="text-left"><span class="my-wow" data-animate="slideInRight" data-duration="0.7s" data-offset="0">С</span></span>
+                <span class="text-left"><span class="my-wow" data-animate="slideInRight" data-duration="0.7s" data-offset="0">Л</span></span>
+                <span class="text-left"><span class="my-wow" data-animate="slideInRight" data-duration="0.7s" data-offset="0">У</span></span>
+                <span class="text-left"><span class="my-wow" data-animate="slideInRight" data-duration="0.7s" data-offset="0">Г</span></span>
+                <span class="text-left"><span class="my-wow" data-animate="slideInRight" data-duration="0.7s" data-offset="0">И</span></span>
+
             </h3>
         </div>
     </div>
-    <div class="projects__list-wrap">
-        <ul class="projects__list">
-            <li class="projects__year">
-                <div class="list__year-name"><span>2019</span></div>
-                <ul class="list__years">
-                    <li class="list__year">
-                        <p class="list__brand-name">Zara</p>
-                        <ul class="list__brands">
-                            <li class="list__brand">
-                                River Mall (Kiev)
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="list__year">
-                        <p class="list__brand-name">BERSHKA</p>
-                        <ul class="list__brands">
-                            <li class="list__brand">
-                                River  mall (OdessaRiviera)
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="list__year">
-                        <p class="list__brand-name">Zara home</p>
-                        <ul class="list__brands">
-                            <li class="list__brand">
-                                River Mall
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+    <div class="services__tabs">
+        <ul class="tabs__buttons js-tabs__buttons">
+            <li class="tabs__button" data-tabs-name="construction">
+                Будівництво
             </li>
-            <li class="projects__year">
-                <div class="list__year-name"><span>2018</span></div>
-                <ul class="list__years">
-                    <li class="list__year">
-                        <p class="list__brand-name">Zara</p>
-                        <ul class="list__brands">
-                            <li class="list__brand">
-                                River Mall (Kiev)
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="list__year">
-                        <p class="list__brand-name">BERSHKA</p>
-                        <ul class="list__brands">
-                            <li class="list__brand">
-                                River  mall (OdessaRiviera)
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="list__year">
-                        <p class="list__brand-name">Zara home</p>
-                        <ul class="list__brands">
-                            <li class="list__brand">
-                                River Mall
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+            <li class="tabs__button" data-tabs-name="service">
+                Технічне обслуговування
             </li>
-            <li class="projects__year">
-                <div class="list__year-name"><span>2017</span></div>
-                <ul class="list__years">
-                    <li class="list__year">
-                        <p class="list__brand-name">Zara</p>
-                        <ul class="list__brands">
-                            <li class="list__brand">
-                                River Mall (Kiev)
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="list__year">
-                        <p class="list__brand-name">BERSHKA</p>
-                        <ul class="list__brands">
-                            <li class="list__brand">
-                                River  mall (OdessaRiviera)
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="list__year">
-                        <p class="list__brand-name">Zara home</p>
-                        <ul class="list__brands">
-                            <li class="list__brand">
-                                River Mall
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+            <li class="tabs__button active" data-tabs-name="cleaning">
+                Клінінг
             </li>
         </ul>
-        <div class="projects__list-filter"></div>
+        <div class="tabs__content">
+            <div class="tabs__content-wrap">
+
+                <div class="tabs__cont tabs__cleaning active" data-tabs-content="cleaning">
+                    <div class="cleaning__left">
+                        <p class="color-red">Клининг - это профессиональная уборка с применением современного высокотехнологичного оборудования и профессиональных химических средств.</p>
+                        <p>Клининговые услуги компании «Промтехцентр» включают в себя полный спектр работ, применимых для зданий различного вида и назначения, а так же востребованных в различных ситуациях.</p>
+                    </div>
+                    <div class="cleaning__right">
+                        <p>Преимущества
+                            профессионального
+                            клининга:</p>
+                        <ul class="cleaning__right-advantages">
+                            <li>Расходы по уборке на Вашем предприятии вычитаются из налогооблагаемой прибыли, в отличие от содержания штата уборщиков, когда предприятие платит налоги и социальные отчисления фонда заработной платы;</li>
+                            <li>
+                                Компания берет на себя своевременное обеспечение моющими и чистящими средствами, туалетной бумагой, салфетками, пакетами для мусора и другими хозяйственными товарами, которые обходятся значительно дешевле, заказчик избавляется от затрат на их поиск и доставку;
+                            </li>
+                            <li>
+                                Возможность проведения специальных работ (кристаллизация мрамора,
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="tabs__content-filter"></div>
+        </div>
     </div>
-
 </section>
-
-
 
 <footer class="footer">
     <div class="footer__wrap">
@@ -187,7 +178,18 @@
 </footer>
 <script src="app/js/libs/jquery.min.js"></script>
 <script src="app/js/libs/scroll/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="./app/js/libs/TweenMax.min.js"></script>
+<script src="./app/js/libs/menu.js"></script>
 <script src="app/js/index.js"></script>
-
+<script>
+    var activeTabs = 'cleaning';
+    $('.js-tabs__buttons').on('click', function (e) {
+        $('[data-tabs-name='+activeTabs+']').removeClass('active');
+        $('[data-tabs-content='+activeTabs+']').removeClass('active');
+        activeTabs = $(e.target).data('tabs-name');
+        $('[data-tabs-name='+activeTabs+']').addClass('active');
+        $('[data-tabs-content='+activeTabs+']').addClass('active');
+    })
+</script>
 </body>
 </html>

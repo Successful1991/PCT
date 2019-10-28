@@ -11,7 +11,6 @@ body{
 .header{
   width: 100%;
   height: var(--header-h);
-
   &__wrap{
     position: relative;
     display: flex;
@@ -20,6 +19,7 @@ body{
     height: 100%;
     width: 100%;
     max-width: 1360px;
+    padding: 0 15px;
     margin: 0 auto;
   }
   &__logo{
@@ -32,7 +32,7 @@ body{
     display: flex;
     &-left{
       font-size: 18px;
-      font-family: Montserrat;
+      font-family: "Montserrat";
       color: #282C34;
       text-transform: uppercase;
       letter-spacing: 9px;
@@ -47,6 +47,7 @@ body{
         display: inline-block;
         height: 3px;
         background: #000;
+        transition: all 0.4s;
         &:nth-child(1){
           width: 50%;
         }
@@ -100,3 +101,21 @@ body{
   }
 }
 
+@media screen and (max-width: 768px) {
+  :root{
+    --header-h: 100px;
+  }
+  .header__logo img{
+    height: 50px;
+  }
+  .header__menu-left{
+    letter-spacing: 3px;
+  }
+  .header__menu{
+    display: flex;
+    flex-direction: column;
+  }
+  .header__menu-right{
+    height: 15px;
+  }
+}

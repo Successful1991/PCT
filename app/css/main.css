@@ -1,5 +1,6 @@
 :root {
-  --header-h: 160px; }
+  --header-h: 160px;
+  --red: #DE3346; }
 
 @font-face {
   font-family: 'Montserrat';
@@ -57,6 +58,7 @@ body {
     height: 100%;
     width: 100%;
     max-width: 1360px;
+    padding: 0 15px;
     margin: 0 auto; }
   .header__logo {
     position: absolute;
@@ -71,7 +73,7 @@ body {
     display: flex; }
     .header__menu-left {
       font-size: 18px;
-      font-family: Montserrat;
+      font-family: "Montserrat";
       color: #282C34;
       text-transform: uppercase;
       letter-spacing: 9px; }
@@ -90,7 +92,10 @@ body {
       .header__menu-right span {
         display: inline-block;
         height: 3px;
-        background: #000; }
+        background: #000;
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        transition: all 0.4s; }
         .header__menu-right span:nth-child(1) {
           width: 50%; }
         .header__menu-right span:nth-child(2) {
@@ -141,10 +146,31 @@ body {
     -o-transition: all 0.3s linear;
     transition: all 0.3s linear; }
 
+@media screen and (max-width: 768px) {
+  :root {
+    --header-h: 100px; }
+  .header__logo img {
+    height: 50px; }
+  .header__menu-left {
+    letter-spacing: 3px; }
+  .header__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .header__menu-right {
+    height: 15px; } }
+
 .footer {
   display: inline-block;
   width: 100%;
-  height: 70px; }
+  height: 70px;
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: capitalize; }
   .footer__wrap {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -491,11 +517,14 @@ body, html {
   position: relative;
   overflow: hidden; }
 
+.color-red {
+  color: var(--red); }
+
 .main {
   display: grid;
   width: 100%;
   grid-template-areas: "oysho zara zara zara" "oysho massimo massimo pullbear" "bershka bershka bershka pullbear" "piraeus stradivarius stradivarius eres" "piraeus universal universal eres";
-  grid-template-rows: repeat(1, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   grid-template-columns: repeat(4, 25%);
   overflow: hidden; }
 
@@ -651,3 +680,19 @@ body, html {
     display: inline-block;
     font-size: 18vw;
     line-height: 0.8em; }
+
+.menu__item-hoverlink {
+  color: var(--red);
+  font-size: 2.25rem; }
+
+@media screen and (max-width: 900px) {
+  .mainmenu__item, .sidemenu__item {
+    margin: 1rem 0; }
+  .main {
+    grid-template-areas: "zara zara" "massimo massimo" "oysho pullbear" "oysho pullbear" "bershka bershka" "stradivarius stradivarius" "piraeus eres" "piraeus eres" "universal universal";
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-columns: repeat(1, 50%); } }
+
+@media screen and (max-width: 768px) {
+  .stores-hover {
+    display: none; } }

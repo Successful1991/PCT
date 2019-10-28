@@ -2,6 +2,9 @@
   display: inline-block;
   width: 100%;
   height: 70px;
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: capitalize;
   &__wrap{
     display: flex;
     justify-content: space-between;

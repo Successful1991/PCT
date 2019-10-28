@@ -5,6 +5,9 @@ $(document).ready(function () {
     });
     scrollInit();
     scroll();
+    $('.js-header__menu').on('click',function () {
+        menu.open();
+    })
 });
 
 function initMap() {
@@ -257,8 +260,8 @@ function scroll() {
 
 }
 function scrollInit() {
-
     var list = document.querySelectorAll('.my-wow');
+    var height = $(window).height();
     list.forEach(function (el) {
        var t = {};
        var duration = $(el).data('duration');
@@ -266,12 +269,13 @@ function scrollInit() {
        var delay = $(el).data('delay');
        var animate =  $(el).data('animate');
         t.duration = duration ? duration : '0s';
-        t.offset = offset ? offset*-1 : '50';
+        t.offset = (offset && height > 768) ? offset*-1 : '100';
         t.delay = delay ? delay : '0s';
         t.animate = animate ? animate : 'fadeIn';
        t.element = el;
        arr.push(t);
     });
+    console.log(arr);
     $('body').mCustomScrollbar({
         theme: "dark",
         scrollInertia: 1500,
@@ -285,7 +289,6 @@ function scrollInit() {
         contentTouchScroll: 25,
         callbacks:{
             whileScrolling:function(){
-                console.log('event');
                 scroll();
             },
         }
