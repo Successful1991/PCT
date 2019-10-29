@@ -1068,6 +1068,24 @@ body {
   .list__years {
     padding: 10px 20px 20px 30px; } }
 
+.about .text-left {
+  padding: 0 5px; }
+  .about .text-left span {
+    font-size: 15vw; }
+
+.about .title__two {
+  margin: auto 0 0 0; }
+  .about .title__two span {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 6vw;
+    line-height: 1em;
+    text-transform: uppercase;
+    color: #DE3346;
+    -webkit-transform: translateX(-10%);
+        -ms-transform: translateX(-10%);
+            transform: translateX(-10%); }
+
 .about .title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1082,16 +1100,6 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     color: #282C34; }
-  .about .title__two {
-    display: inline-block;
-    font-weight: 600;
-    font-size: 6vw;
-    line-height: 1em;
-    text-transform: uppercase;
-    color: #DE3346;
-    -webkit-transform: translateX(-10%);
-        -ms-transform: translateX(-10%);
-            transform: translateX(-10%); }
 
 .about .red {
   color: #DE3346; }
@@ -1307,6 +1315,40 @@ body {
     padding: 20px 5px 20px; }
   .about__history {
     padding: 20px 0; } }
+
+.document {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 30px; }
+  .document__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-negative: 1;
+        flex-shrink: 1;
+    margin: 0 0 4.4vw 0; }
+    .document__item-img {
+      max-width: -webkit-max-content;
+      max-width: -moz-max-content;
+      max-width: max-content;
+      width: 50%;
+      max-height: 100%;
+      -ms-flex-negative: 1;
+          flex-shrink: 1; }
+    .document__item-text {
+      padding: 10px 20px;
+      font-size: 18px;
+      line-height: 1.8em;
+      white-space: pre-line; }
 
 .services {
   min-height: calc(100vh - var(--header-h) - 90px); }
@@ -1604,10 +1646,11 @@ body, html {
   font-weight: bold;
   color: #282C34;
   text-transform: uppercase; }
-  .title__name span {
-    display: inline-block;
-    font-size: 18vw;
-    line-height: 0.8em; }
+
+.text-left span {
+  display: inline-block;
+  font-size: 18vw;
+  line-height: 1.02em; }
 
 .menu__item-hoverlink {
   color: var(--red);
