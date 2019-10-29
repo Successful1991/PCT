@@ -19,7 +19,7 @@
     flex-direction: column;
     padding: 20px;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 1.2em;
     letter-spacing: 0.1em;
     color: #282C34;
     &__list{
@@ -27,8 +27,8 @@
     }
     &__country{
       font-weight: 600;
-      font-size: 18px;
-      line-height: 22px;
+      //font-size: 18px;
+      //line-height: 1.2em;
       letter-spacing: 0.5em;
       text-transform: uppercase;
       margin-bottom: 20px;
@@ -53,7 +53,7 @@
     label{
       font-weight: 500;
       font-size: 18px;
-      line-height: 22px;
+      line-height: 1.2em;
       letter-spacing: 0.5em;
       text-transform: uppercase;
     }
@@ -82,5 +82,63 @@
       background: url("../img/Vector.svg")no-repeat center/ contain;
       border: none;
     }
+  }
+}
+
+@media screen and (max-width: 992px){
+  .contact__content{
+    grid-template-areas: 'map' 'address' 'form';
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+  .contact .address{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .contact .address__list{
+    flex-basis: 50%;
+    padding: 5px 15px;
+  }
+  .contact .form{
+    margin: 0 auto;
+    padding: 10px 60px 0;
+  }
+  .contact .form__submit{
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .contact{
+    .address__list{
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+  .address{
+    font-size: 3vw;
+  }
+  .form{
+    width: 90%;
+    padding: 0 40px 0 0;
+  }
+  .form__submit{
+    height: 30px;
+    width: 30px;
+    bottom: 15px;
+  }
+  .form label{
+    font-size: 3vw;
+  }
+  .form__input{
+    height: 25px;
+  }
+  .form textarea.form__input{
+    height: 50px;
+  }
+  .address__street,.address__tel,.address__country,.form__info{
+    margin-bottom: 10px;
+  }
+
+
   }
 }

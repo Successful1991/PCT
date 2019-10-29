@@ -22,6 +22,7 @@
       right: 2%;
       display: inline-block;
       height: 620px;
+      max-height: 100%;
       width: 45%;
       padding: 45px 60px;
       background: #EFF1F4;
@@ -35,7 +36,8 @@
       background: -webkit-gradient(linear, left bottom, left top, from(#EFF1F4), to(rgba(239, 241, 244, 0)));
       background: -webkit-linear-gradient(bottom, #EFF1F4 0%, rgba(239, 241, 244, 0) 100%);
       background: -o-linear-gradient(bottom, #EFF1F4 0%, rgba(239, 241, 244, 0) 100%);
-      background: linear-gradient(0deg, #EFF1F4 0%, rgba(239, 241, 244, 0) 100%); }
+      background: linear-gradient(0deg, #EFF1F4 0%, rgba(239, 241, 244, 0) 100%);
+      pointer-events: none; }
   .projects__year {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -44,8 +46,7 @@
 .list__years {
   display: inline-block;
   width: 100%;
-  padding: 20px 20px 10px 60px;
-  background: #ffffff; }
+  padding: 20px 20px 10px 60px; }
 
 .list__year {
   margin-bottom: 10px; }
@@ -57,11 +58,10 @@
     color: #ffffff;
     font-weight: 600;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 1.2em;
     letter-spacing: 0.5em;
     text-transform: uppercase;
-    padding: 14px 26px;
-    background: #DE3346; }
+    padding: 14px 26px; }
     .list__year-name span {
       position: absolute;
       top: 0;
@@ -89,7 +89,32 @@
   .list__brand-name {
     font-weight: 600;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 1.2em;
     letter-spacing: 0.5em;
     text-transform: uppercase;
     color: #DE3346; }
+
+@media screen and (min-width: 1024px) {
+  .list__years:hover {
+    background: #ffffff; } }
+
+@media screen and (max-width: 1024px) {
+  .projects__list-wrap {
+    position: static;
+    width: 100%;
+    padding: 45px 10vw;
+    max-height: none;
+    height: calc(100vh - 70px); }
+  .list__year-name {
+    font-size: 3vw;
+    padding: 15px; }
+    .list__year-name span {
+      padding: 10px; } }
+
+@media screen and (max-width: 768px) {
+  .list__brand-name {
+    font-size: 3vw; }
+  .list__brand {
+    font-size: 3vw; }
+  .list__years {
+    padding: 10px 20px 20px 30px; } }

@@ -154,7 +154,6 @@ function initMap() {
     google.maps.event.addListener(map, "zoom_changed", function() {
         newlong = marker.getPosition().lng() + (-0.00283 * Math.pow(2, (17 - map.getZoom())));
         newLat = marker.getPosition().lat() + (0.00013 * Math.pow(2, (17 - map.getZoom())));
-        infoBubble.setPosition(new google.maps.LatLng(newLat, newlong));
     });
 }
 
@@ -275,17 +274,16 @@ function scrollInit() {
        t.element = el;
        arr.push(t);
     });
-    console.log(arr);
     $('body').mCustomScrollbar({
         theme: "dark",
-        scrollInertia: 1500,
+        scrollInertia: 1000,
         mouseWheel:{
-            deltaFactor: 40,
+            deltaFactor: 80,
             normalizeDelta: false
         },
         scrollbarPosition: "inside",
 //      scrollbarPosition: "outside",
-        documentTouchScroll: false,
+        documentTouchScroll: true,
         contentTouchScroll: 25,
         callbacks:{
             whileScrolling:function(){

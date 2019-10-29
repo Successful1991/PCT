@@ -192,7 +192,7 @@
     .project__info-name {
       font-weight: 600;
       font-size: 18px;
-      line-height: 22px;
+      line-height: 1.2em;
       text-align: center;
       letter-spacing: 0.5em;
       text-transform: uppercase;
@@ -265,3 +265,48 @@
     grid-area: img11;
     width: 39%;
     margin: 0 auto; }
+
+@media screen and (max-width: 768px) {
+  .first--screen {
+    grid-template-areas: '. . logo logo . .' '. img img img img .' '. year year year year .' 'mouse . brand brand . .';
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(6, 1fr);
+    min-height: 100px; }
+  .first--screen__img img {
+    height: 100%; }
+  .first--screen__year-span {
+    height: auto;
+    width: auto;
+    -webkit-transform: translate(-50%, 0) rotate(0);
+        -ms-transform: translate(-50%, 0) rotate(0);
+            transform: translate(-50%, 0) rotate(0); }
+  .first--screen__year-block {
+    -webkit-transform: translate(-15vw, 5vw) rotate(0deg);
+        -ms-transform: translate(-15vw, 5vw) rotate(0deg);
+            transform: translate(-15vw, 5vw) rotate(0deg); }
+  .first--screen__year {
+    height: 90px; }
+  .project__info-name {
+    font-size: 10px;
+    letter-spacing: 0.3em; }
+  .project__text-block span {
+    padding: 8px; }
+  .project__info-number {
+    padding-left: 40px; }
+  .project__year-wrap {
+    padding: 20px; }
+  .project__siting-wrap {
+    padding: 20px; }
+  .project__brand-wrap {
+    padding: 20px; }
+  .project__area-wrap {
+    padding: 20px; }
+  .project__img-1 {
+    margin: 0; }
+  .project__img-3 {
+    margin: auto 0 -10%;
+    width: 75%; }
+  .project__img-4 {
+    width: 66%; }
+  .project__img-11 {
+    width: 60%; } }

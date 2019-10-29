@@ -3,6 +3,14 @@
 @import "header";
 @import "footer";
 @import "animate";
+
+@import "contact";
+@import "project";
+@import "projects";
+@import "about";
+@import "services";
+
+
 body, html {
   height: 100%;
 }
@@ -214,5 +222,8 @@ body, html {
 @media screen and (max-width: 768px) {
   .stores-hover{
     display: none;
+  }
+  .title__block{
+    margin: 0 -3px 0 20px;
   }
 }
