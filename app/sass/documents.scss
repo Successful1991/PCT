@@ -1,5 +1,15 @@
 .documents{
-
+  &__button{
+    position: absolute;
+    bottom:0;
+    right:30px;
+    &-wrap{
+      position: relative;
+      height: 0;
+      width: 0;
+      margin: 0 0 0 auto;
+    }
+  }
 }
 .document{
   display: flex;
@@ -8,9 +18,10 @@
   &__item{
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-grow: 1;
     flex-shrink: 1;
-    margin: 0 0 4.4vw 0;
+    margin: 0 10px 4.4vw;
     &-img{
       max-width: max-content;
       width: 50%;
@@ -18,11 +29,76 @@
       flex-shrink: 1;
     }
     &-text{
-      //width: 50%;
       padding: 10px 20px;
-      font-size: 18px;
+      font-size: 1.2vw;
       line-height: 1.8em;
       white-space: pre-line;
+    }
+  }
+}
+.button__license{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 31vw;
+  height: 3.8vw;
+  border: none;
+  outline: none;
+  background: var(--red);
+  margin-bottom: 27px;
+  cursor: pointer;
+  &-text{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.2vw;
+    line-height: 1.2em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #ffffff;
+    &::after{
+      content: '';
+      display: inline-block;
+      height: 25px;
+      width: 21px;
+      background: url("../img/array-down.svg")no-repeat center;
+      margin-left: 20px;
+    }
+  }
+
+}
+
+@media screen and(max-width: 992px){
+  .button__license{
+    width: 40vw;
+    height: 4.5vw;
+    &-text{
+      font-size: 1.6vw;
+    }
+  }
+}
+@media screen and(max-width: 768px){
+  .documents__button-wrap{
+    height: auto;
+    width: 100%;
+    padding: 20px 5px;
+  }
+  .documents__button{
+    position: static;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+  }
+  .button__license{
+    width: 280px;
+    height: 40px;
+    margin: 0 10px 20px;
+    &-text{
+      font-size: 12px;
     }
   }
 }

@@ -206,6 +206,9 @@
       font-size: 2.6vw;
     }
   }
+  .document__item-img{
+    max-width: 30%;
+  }
   .about__services{
     grid-template-columns: repeat(5, 20%);
   }

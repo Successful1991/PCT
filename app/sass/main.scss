@@ -189,7 +189,8 @@ body, html {
   font-weight: bold;
   color: #282C34;
   text-transform: uppercase;
-
+  padding: 0 10px;
+  pointer-events: none;
 }
 .text-left span{
   display: inline-block;
