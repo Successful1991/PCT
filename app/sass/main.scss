@@ -41,9 +41,41 @@ body, html {
   overflow: hidden;
   visibility: hidden;
   z-index: 2;
-  img {
+  &__link{
+    display: inline-block;
     height: 100%;
     width: 100%;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  &__content{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-text{
+      font-weight: 600;
+      font-size: 18px;
+      color: #ffffff;
+      line-height: 1.2em;
+      letter-spacing: 0.5em;
+      text-transform: uppercase;
+    }
+    &-block{
+      width: 21.26px;
+      height: 3px;
+      background: #FFFFFF;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 10px 0 15px;
+    }
   }
   &-hover {
     position: absolute;
@@ -59,6 +91,8 @@ body, html {
     color: #ffffff;
     padding: 40px 20px;
     opacity: 0;
+    z-index: 6;
+    transition: all 0.1s ease 0s;
     &__brand {
       font-size: 10px;
       letter-spacing: 1em;
@@ -88,62 +122,116 @@ body, html {
       letter-spacing: 0.1em;
     }
   }
-  &:hover > .stores-hover{
+  &:hover .stores-hover{
     opacity: 1;
+  }
+  &::before,&::after{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 200vw;
+    width: 200vw;
+    background: #eeeeee;
+    transform: translate(0, 0)rotate(135deg);
+    transform-origin: left top;
+  }
+  &:hover{
+    &::before,&::after{
+      transform: translate(100%, 0)rotate(135deg);
+    }
+  }
+  &::before{
+    z-index: 4;
+    background: rgba(193,193,193,0.7);
+    transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  }
+  &::after{
+    z-index: 5;
+    //background: #9fee6f;
+    transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.3s;
   }
 }
 
   .oysho {
     grid-area: oysho;
     &-hover{
+      //background: #EB5757;
+      //transition: all 0.1s ease 0.4s;
+    }
+    &::after{
       background: #EB5757;
     }
   }
   .zara {
     grid-area: zara;
     &-hover{
+      //background: #219653;
+    }
+    &::after{
       background: #219653;
     }
   }
   .massimo {
     grid-area: massimo;
     &-hover{
+      //background: #F2C94C;
+    }
+    &::after{
       background: #F2C94C;
     }
   }
   .pullbear {
     grid-area: pullbear;
     &-hover{
+      //background: #2F80ED;
+    }
+    &::after{
       background: #2F80ED;
     }
   }
   .bershka {
     grid-area: bershka;
     &-hover{
+      //background: #9B51E0;
+    }
+    &::after{
       background: #9B51E0;
     }
   }
   .piraeus {
     grid-area: piraeus;
     &-hover{
+      //background: #219653;
+    }
+    &::after{
       background: #219653;
     }
   }
   .stradivarius {
     grid-area: stradivarius;
     &-hover{
+      //background: #EB5757;
+    }
+    &::after{
       background: #EB5757;
     }
   }
   .eres {
     grid-area: eres;
     &-hover{
+      //background: #F2994A;
+    }
+     &::after{
       background: #F2994A;
     }
   }
   .universal {
     grid-area: universal;
     &-hover{
+      //background: #2F80ED;
+    }
+     &::after{
       background: #2F80ED;
     }
   }
@@ -189,7 +277,7 @@ body, html {
   font-weight: bold;
   color: #282C34;
   text-transform: uppercase;
-  padding: 0 10px;
+  padding: 0 0 0 10px;
   pointer-events: none;
 }
 .text-left span{

@@ -1,11 +1,9 @@
 .projects {
   position: relative;
   min-height: calc(100vh - var(--header-h) - 90px); }
-  .projects .title {
-    font-weight: 700;
-    font-size: 18vw;
-    line-height: 1em;
-    text-transform: uppercase; }
+  .projects .text-left span {
+    font-size: 16vw;
+    line-height: 0.8em; }
   .projects__list {
     overflow-y: auto;
     height: 100%; }
@@ -21,7 +19,7 @@
       top: 0;
       right: 2%;
       display: inline-block;
-      height: 620px;
+      height: calc(100vh - var(--header-h) - 70px);
       max-height: 100%;
       width: 45%;
       padding: 45px 60px;
@@ -93,6 +91,9 @@
     letter-spacing: 0.5em;
     text-transform: uppercase;
     color: #DE3346; }
+  .list__brand a {
+    color: #282C34;
+    text-decoration: none; }
 
 @media screen and (min-width: 1024px) {
   .list__years:hover {

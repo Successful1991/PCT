@@ -105,7 +105,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 22px;
+  height: 42px;
   cursor: pointer;
   overflow: hidden;
   -webkit-transition: 0.9s easy;
@@ -119,8 +119,16 @@ body {
     margin: auto 0; }
   .lang:hover {
     height: auto; }
-  .lang-list__item:hover {
-    background: #DE3346; }
+  .lang-list__item {
+    padding: 10px; }
+    .lang-list__item:hover {
+      background: #dadbde; }
+    .lang-list__item a {
+      text-decoration: none;
+      font-size: 20px;
+      color: #000000;
+      text-transform: uppercase;
+      letter-spacing: 2px; }
 
 .lang-list {
   display: -webkit-box;
@@ -130,13 +138,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
-
-.lang-list__item a {
-  text-decoration: none;
-  font-size: 20px;
-  color: #000000;
-  text-transform: uppercase;
-  letter-spacing: 2px; }
 
 .header__menu {
   cursor: pointer; }
@@ -639,7 +640,7 @@ body {
   grid-template-areas: 'logo img img img img year' 'mouse . brand brand . .';
   grid-template-rows: 1fr;
   grid-template-columns: repeat(6, 1fr);
-  width: 100%;
+  width: 100vw;
   min-height: calc(100vh - var(--header-h) - 90px); }
   .first--screen__logo {
     grid-area: logo;
@@ -655,12 +656,18 @@ body {
     max-width: 100%;
     padding: 10px; }
   .first--screen__img {
-    grid-area: img; }
+    grid-area: img;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 100%; }
     .first--screen__img img {
-      height: calc(100vh - var(--header-h) - 90px);
-      width: 100%;
-      -o-object-fit: contain;
-         object-fit: contain; }
+      display: inline-block;
+      width: 100%; }
   .first--screen__year {
     position: relative;
     grid-area: year;
@@ -853,6 +860,13 @@ body {
       -webkit-transform-origin: right top;
           -ms-transform-origin: right top;
               transform-origin: right top; }
+  .project__img {
+    position: relative;
+    display: inline-block;
+    height: auto;
+    width: 100%; }
+    .project__img img {
+      width: 100%; }
   .project__img-1 {
     grid-area: img1;
     width: 100%;
@@ -860,7 +874,7 @@ body {
   .project__img-2 {
     grid-area: img2;
     width: 116%;
-    margin-left: -16px; }
+    margin-left: -16%; }
   .project__img-3 {
     grid-area: img3;
     -webkit-box-align: end;
@@ -950,11 +964,9 @@ body {
 .projects {
   position: relative;
   min-height: calc(100vh - var(--header-h) - 90px); }
-  .projects .title {
-    font-weight: 700;
-    font-size: 18vw;
-    line-height: 1em;
-    text-transform: uppercase; }
+  .projects .text-left span {
+    font-size: 16vw;
+    line-height: 0.8em; }
   .projects__list {
     overflow-y: auto;
     height: 100%; }
@@ -970,7 +982,7 @@ body {
       top: 0;
       right: 2%;
       display: inline-block;
-      height: 620px;
+      height: calc(100vh - var(--header-h) - 70px);
       max-height: 100%;
       width: 45%;
       padding: 45px 60px;
@@ -1042,6 +1054,9 @@ body {
     letter-spacing: 0.5em;
     text-transform: uppercase;
     color: #DE3346; }
+  .list__brand a {
+    color: #282C34;
+    text-decoration: none; }
 
 @media screen and (min-width: 1024px) {
   .list__years:hover {
@@ -1590,9 +1605,46 @@ body, html {
   overflow: hidden;
   visibility: hidden;
   z-index: 2; }
-  .stores img {
+  .stores__link {
+    display: inline-block;
     height: 100%;
     width: 100%; }
+    .stores__link img {
+      height: 100%;
+      width: 100%; }
+  .stores__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .stores__content-text {
+      font-weight: 600;
+      font-size: 18px;
+      color: #ffffff;
+      line-height: 1.2em;
+      letter-spacing: 0.5em;
+      text-transform: uppercase; }
+    .stores__content-block {
+      width: 21.26px;
+      height: 3px;
+      background: #FFFFFF;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 10px 0 15px; }
   .stores-hover {
     position: absolute;
     top: 0;
@@ -1615,7 +1667,11 @@ body, html {
     pointer-events: none;
     color: #ffffff;
     padding: 40px 20px;
-    opacity: 0; }
+    opacity: 0;
+    z-index: 6;
+    -webkit-transition: all 0.1s ease 0s;
+    -o-transition: all 0.1s ease 0s;
+    transition: all 0.1s ease 0s; }
     .stores-hover__brand {
       font-size: 10px;
       letter-spacing: 1em;
@@ -1640,52 +1696,81 @@ body, html {
     .stores-hover__text {
       font-size: 10px;
       letter-spacing: 0.1em; }
-  .stores:hover > .stores-hover {
+  .stores:hover .stores-hover {
     opacity: 1; }
+  .stores::before, .stores::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 200vw;
+    width: 200vw;
+    background: #eeeeee;
+    -webkit-transform: translate(0, 0) rotate(135deg);
+        -ms-transform: translate(0, 0) rotate(135deg);
+            transform: translate(0, 0) rotate(135deg);
+    -webkit-transform-origin: left top;
+        -ms-transform-origin: left top;
+            transform-origin: left top; }
+  .stores:hover::before, .stores:hover::after {
+    -webkit-transform: translate(100%, 0) rotate(135deg);
+        -ms-transform: translate(100%, 0) rotate(135deg);
+            transform: translate(100%, 0) rotate(135deg); }
+  .stores::before {
+    z-index: 4;
+    background: rgba(193, 193, 193, 0.7);
+    -webkit-transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+    -o-transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+    transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1) 0s; }
+  .stores::after {
+    z-index: 5;
+    -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.3s;
+    -o-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.3s;
+    transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.3s; }
 
 .oysho {
   grid-area: oysho; }
-  .oysho-hover {
+  .oysho::after {
     background: #EB5757; }
 
 .zara {
   grid-area: zara; }
-  .zara-hover {
+  .zara::after {
     background: #219653; }
 
 .massimo {
   grid-area: massimo; }
-  .massimo-hover {
+  .massimo::after {
     background: #F2C94C; }
 
 .pullbear {
   grid-area: pullbear; }
-  .pullbear-hover {
+  .pullbear::after {
     background: #2F80ED; }
 
 .bershka {
   grid-area: bershka; }
-  .bershka-hover {
+  .bershka::after {
     background: #9B51E0; }
 
 .piraeus {
   grid-area: piraeus; }
-  .piraeus-hover {
+  .piraeus::after {
     background: #219653; }
 
 .stradivarius {
   grid-area: stradivarius; }
-  .stradivarius-hover {
+  .stradivarius::after {
     background: #EB5757; }
 
 .eres {
   grid-area: eres; }
-  .eres-hover {
+  .eres::after {
     background: #F2994A; }
 
 .universal {
   grid-area: universal; }
-  .universal-hover {
+  .universal::after {
     background: #2F80ED; }
 
 .text-stroke {
@@ -1732,7 +1817,7 @@ body, html {
   font-weight: bold;
   color: #282C34;
   text-transform: uppercase;
-  padding: 0 10px;
+  padding: 0 0 0 10px;
   pointer-events: none; }
 
 .text-left span {

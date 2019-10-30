@@ -73,7 +73,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 22px;
+  height: 42px;
   cursor: pointer;
   overflow: hidden;
   -webkit-transition: 0.9s easy;
@@ -87,8 +87,16 @@ body {
     margin: auto 0; }
   .lang:hover {
     height: auto; }
-  .lang-list__item:hover {
-    background: #DE3346; }
+  .lang-list__item {
+    padding: 10px; }
+    .lang-list__item:hover {
+      background: #dadbde; }
+    .lang-list__item a {
+      text-decoration: none;
+      font-size: 20px;
+      color: #000000;
+      text-transform: uppercase;
+      letter-spacing: 2px; }
 
 .lang-list {
   display: -webkit-box;
@@ -98,13 +106,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
-
-.lang-list__item a {
-  text-decoration: none;
-  font-size: 20px;
-  color: #000000;
-  text-transform: uppercase;
-  letter-spacing: 2px; }
 
 .header__menu {
   cursor: pointer; }

@@ -61,7 +61,7 @@ body{
 }
 .lang{
   display: flex;
-  height: 22px;
+  height: 42px;
   cursor: pointer;
   overflow: hidden;
   transition: 0.9s easy;
@@ -76,21 +76,25 @@ body{
     height: auto;
 
   }
-  &-list__item:hover{
-    background: #DE3346;
+  &-list__item{
+    &:hover{
+      background: #dadbde;
+    }
+    padding: 10px;
+    a{
+      text-decoration: none;
+      font-size: 20px;
+      color: #000000;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
   }
 }
 .lang-list{
   display: flex;
   flex-direction: column;
 }
-.lang-list__item a{
-  text-decoration: none;
-  font-size: 20px;
-  color: #000000;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
+
 .header__menu{
   cursor: pointer;
   &:hover{

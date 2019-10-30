@@ -3,11 +3,22 @@ $(document).ready(function () {
         e.preventDefault();
         ajax_form(e,"POST","/wp-content/themes/heliview/includes/application.php");
     });
+
     scrollInit();
     scroll();
     $('.js-header__menu').on('click',function () {
         menu.open();
-    })
+    });
+    $('.map').on('mouseover',function () {
+        console.log('1');
+        $('body').mCustomScrollbar("disable");
+    });
+    $('.map').on('mouseout',function () {
+        $('body').mCustomScrollbar("update");
+    });
+
+    // new WOW().init();
+
 });
 
 function initMap() {
@@ -240,6 +251,7 @@ function replaceText(block){
 }
 
 var arr = [];
+var arrParallax = [];
 function scroll() {
     if(arr.length > 0){
         var height =  $(document).height();
@@ -258,10 +270,15 @@ function scroll() {
     }
 
 }
+function parallax() {
+    var height =  $(document).height();
+    console.log('dd');
+}
 function scrollInit() {
     var list = document.querySelectorAll('.my-wow');
     var height = $(window).height();
     list.forEach(function (el) {
+        arrParallax.push(el);
        var t = {};
        var duration = $(el).data('duration');
        var offset = $(el).data('offset');
@@ -276,10 +293,12 @@ function scrollInit() {
     });
     $('body').mCustomScrollbar({
         theme: "dark",
-        scrollInertia: 1000,
+        scrollInertia: 2000,
         mouseWheel:{
-            deltaFactor: 80,
-            normalizeDelta: false
+            // deltaFactor: 20,
+            deltaFactor: 0,
+            normalizeDelta: false,
+            scrollAmount: 220
         },
         scrollbarPosition: "inside",
 //      scrollbarPosition: "outside",
@@ -288,6 +307,7 @@ function scrollInit() {
         callbacks:{
             whileScrolling:function(){
                 scroll();
+                parallax();
             },
         }
     });
