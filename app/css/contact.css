@@ -33,8 +33,12 @@
     margin-bottom: 20px; }
   .contact .address__tel {
     margin-bottom: 20px; }
+    .contact .address__tel a {
+      color: #282C34; }
   .contact .address__street {
     margin-bottom: 20px; }
+    .contact .address__street a {
+      color: #282C34; }
 
 .contact .form {
   grid-area: form;

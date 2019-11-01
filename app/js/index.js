@@ -18,7 +18,6 @@ $(document).ready(function () {
     });
 
     // new WOW().init();
-
 });
 
 function initMap() {
@@ -270,10 +269,6 @@ function scroll() {
     }
 
 }
-function parallax() {
-    var height =  $(document).height();
-    console.log('dd');
-}
 function scrollInit() {
     var list = document.querySelectorAll('.my-wow');
     var height = $(window).height();
@@ -295,7 +290,6 @@ function scrollInit() {
         theme: "dark",
         scrollInertia: 2000,
         mouseWheel:{
-            // deltaFactor: 20,
             deltaFactor: 0,
             normalizeDelta: false,
             scrollAmount: 220
@@ -307,7 +301,7 @@ function scrollInit() {
         callbacks:{
             whileScrolling:function(){
                 scroll();
-                parallax();
+
             },
         }
     });

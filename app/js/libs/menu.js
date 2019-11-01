@@ -31,11 +31,16 @@
         }
         // Open the menu.
         open() {
+          this.DOM.el.classList['add']('menu--open-active');
             this.toggle('open');
         }
         // Close the menu.
         close() {
             this.toggle('close');
+            var domEl = this.DOM.el;
+          setTimeout(function(){
+            domEl.classList['remove']('menu--open-active');
+          },1000);
         }
         toggle(action) {
             if ( this.isAnimating ) return;

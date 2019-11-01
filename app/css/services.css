@@ -45,8 +45,10 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
   text-transform: uppercase;
   color: #282C34;
+  cursor: pointer;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s; }
@@ -54,8 +56,17 @@
     background: var(--red);
     color: white; }
 
+.tabs__construction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto; }
+
 .tabs__content {
-  height: 740px;
+  height: 70vh;
   font-weight: 600;
   font-size: 30px;
   line-height: 1.6em;
@@ -82,14 +93,16 @@
     background: -o-linear-gradient(bottom, #EFF1F4 0%, rgba(239, 241, 244, 0) 100%);
     background: linear-gradient(0deg, #EFF1F4 0%, rgba(239, 241, 244, 0) 100%); }
 
-.tabs__cleaning {
+.tabs__cleaning, .tabs__service {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 90%;
   margin: 0 auto; }
-  .tabs__cleaning p {
-    margin-bottom: 25px; }
 
 .tabs__cont {
   position: absolute;
@@ -99,28 +112,49 @@
   right: 0;
   opacity: 0;
   z-index: 0; }
+  .tabs__cont p {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.5em;
+    margin-bottom: 25px; }
 
-.tabs__cleaning.active {
+.tabs__cont.active {
   opacity: 1;
   z-index: 5; }
 
-.cleaning__left {
+.cleaning__left, .service__left {
   width: 60%; }
 
-.cleaning__right {
+.cleaning__right, .service__right {
   width: 40%;
   padding: 0 20px; }
-  .cleaning__right::-webkit-scrollbar {
+  .cleaning__right::-webkit-scrollbar, .service__right::-webkit-scrollbar {
     width: 3px; }
-  .cleaning__right::-webkit-scrollbar-track {
+  .cleaning__right::-webkit-scrollbar-track, .service__right::-webkit-scrollbar-track {
     -webkit-box-shadow: none; }
-  .cleaning__right::-webkit-scrollbar-thumb {
+  .cleaning__right::-webkit-scrollbar-thumb, .service__right::-webkit-scrollbar-thumb {
     background-color: #DE3346;
     border-radius: 30px; }
-  .cleaning__right-advantages {
+  .cleaning__right-advantages, .service__right-advantages {
     height: 400px;
     font-size: 18px;
     line-height: 1.4em;
     padding-left: 20px;
     list-style: disc;
     overflow-y: auto; }
+
+.service__right-advantages {
+  padding-left: 0;
+  list-style: none; }
+
+@media screen and (max-width: 992px) {
+  .tabs__cont p {
+    font-size: 3vw;
+    margin-bottom: 15px; }
+  .cleaning__right-advantages, .service__right-advantages {
+    font-size: 2.3vw; }
+  .cleaning__left, .service__left, .cleaning__right, .service__right {
+    width: 100%;
+    padding: 0; }
+  .tabs__button {
+    font-size: 2.2vw; } }

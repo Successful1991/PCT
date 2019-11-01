@@ -48,6 +48,7 @@ body, html {
     img {
       height: 100%;
       width: 100%;
+      pointer-events: none;
     }
   }
   &__content{
@@ -60,6 +61,7 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    pointer-events: none;
     &-text{
       font-weight: 600;
       font-size: 18px;
@@ -133,6 +135,7 @@ body, html {
     height: 200vw;
     width: 200vw;
     background: #eeeeee;
+    pointer-events: none;
     transform: translate(0, 0)rotate(135deg);
     transform-origin: left top;
   }
@@ -282,8 +285,8 @@ body, html {
 }
 .text-left span{
   display: inline-block;
-  font-size: 18vw;
-  line-height: 1.02em;
+  font-size: 16vw;
+  line-height: 0.8em;
 }
 .menu__item-hoverlink{
   color: var(--red);

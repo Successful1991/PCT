@@ -230,13 +230,19 @@ main {
 	left: 0;
 	z-index: 200;
 	display: grid;
+	visibility: hidden;
 	grid-template-columns: 100%;
 	grid-template-rows: repeat(3,33.33%);
 	pointer-events: none;
 }
 
 .menu--open {
+	/*visibility: visible;*/
 	pointer-events: auto;
+}
+.menu--open-active {
+	visibility: visible;
+	/*pointer-events: auto;*/
 }
 
 .menu__item {
@@ -359,9 +365,9 @@ main {
 	display: block;
 }
 
-.menu__item-hoverlink:hover {
-	color: var(--color-link);
-}
+/*.menu__item-hoverlink:hover {*/
+	/*color: var(--color-link);*/
+/*}*/
 .menu__item--4:hover .menu__item-inner *{
 	color: var(--color-link-hover)
 }

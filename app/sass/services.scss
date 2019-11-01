@@ -30,16 +30,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     text-transform: uppercase;
     color: #282C34;
+    cursor: pointer;
     transition: all 0.3s;
     &.active{
       background: var(--red);
       color: white;
     }
   };
+  &__construction{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+  }
   &__content{
-    height: 740px;
+    height: 70vh;
     font-weight: 600;
     font-size: 30px;
     line-height: 1.6em;
@@ -68,13 +76,11 @@
       background: linear-gradient(0deg, #EFF1F4 0%, rgba(239, 241, 244, 0) 100%);
     }
   }
-  &__cleaning{
+  &__cleaning,&__service{
     display: flex;
+    flex-direction: column;
     width: 90%;
     margin: 0 auto;
-    p{
-      margin-bottom: 25px;
-    }
   }
   &__cont{
     position: absolute;
@@ -84,14 +90,20 @@
     right: 0;
     opacity: 0;
     z-index: 0;
+    p{
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 1.5em;
+      margin-bottom: 25px;
+    }
   }
 }
-.tabs__cleaning.active{
+.tabs__cont.active{
   opacity: 1;
   z-index: 5;
 }
 
-.cleaning{
+.cleaning,.service{
   &__left{
     width: 60%;
   }
@@ -116,5 +128,27 @@
       list-style: disc;
       overflow-y: auto;
     }
+  }
+}
+.service__right-advantages{
+  padding-left: 0;
+  list-style: none;
+}
+
+@media screen and (max-width: 992px){
+  .tabs__cont p {
+    font-size: 3vw;
+    margin-bottom: 15px;
+  }
+
+  .cleaning__right-advantages, .service__right-advantages{
+    font-size: 2.3vw;
+  }
+  .cleaning__left, .service__left,.cleaning__right, .service__right{
+    width: 100%;
+    padding: 0;
+  }
+  .tabs__button{
+    font-size: 2.2vw;
   }
 }
