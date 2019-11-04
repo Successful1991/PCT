@@ -89,7 +89,6 @@
     right: 0;
     height: 40%;
     background: -webkit-gradient(linear, left bottom, left top, from(#EFF1F4), to(rgba(239, 241, 244, 0)));
-    background: -webkit-linear-gradient(bottom, #EFF1F4 0%, rgba(239, 241, 244, 0) 100%);
     background: -o-linear-gradient(bottom, #EFF1F4 0%, rgba(239, 241, 244, 0) 100%);
     background: linear-gradient(0deg, #EFF1F4 0%, rgba(239, 241, 244, 0) 100%); }
 
@@ -140,8 +139,11 @@
     font-size: 18px;
     line-height: 1.4em;
     padding-left: 20px;
+    font-weight: 500;
     list-style: disc;
     overflow-y: auto; }
+    .cleaning__right-advantages li, .service__right-advantages li {
+      margin-bottom: 15px; }
 
 .service__right-advantages {
   padding-left: 0;

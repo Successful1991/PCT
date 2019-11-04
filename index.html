@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="app/css/reset.css">
-    <link rel="stylesheet" href="./app/js/libs/scroll/jquery.mCustomScrollbar.min.css" />
+    <!--<link rel="stylesheet" href="./app/js/libs/scroll/jquery.mCustomScrollbar.min.css" />-->
     <link rel="stylesheet" type="text/css" href="app/css/menu.css" />
     <link rel="stylesheet" href="app/css/main.css">
     <title>TEST</title>
@@ -36,7 +36,9 @@
                         </a>
                     </li>
                 </ul>
-                <p class="lang-arrow">∨</p>
+                <p class="lang-arrow"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.42469 15.9099C8.01048 16.4957 8.96023 16.4957 9.54601 15.9099L15.91 9.54596C16.4958 8.96017 16.4958 8.01043 15.91 7.42464C15.3242 6.83885 14.3744 6.83885 13.7887 7.42464L8.48535 12.7279L3.18205 7.42464C2.59626 6.83885 1.64652 6.83885 1.06073 7.42464C0.474944 8.01043 0.474944 8.96017 1.06073 9.54596L7.42469 15.9099Z" fill="#282C34"/>
+                </svg></p>
             </div>
         </div>
         <a href="#" class="header__logo"><img src="./app/img/Logo.svg" alt="logo"></a>
@@ -52,59 +54,59 @@
     </div>
 </header>
 <nav class="menu">
-        <div class="menu__item menu__item--1" data-direction="bt">
-            <div class="menu__item-inner">
-                <div class="mainmenu">
-                    <a href="#" class="mainmenu__item">Головна</a>
-                    <a href="#" class="mainmenu__item">Проекти</a>
-                    <a href="#" class="mainmenu__item">Послуги</a>
-                    <a href="#" class="mainmenu__item">Про нас</a>
-                    <a href="#" class="mainmenu__item">Контакти</a>
-                </div>
-                <p class="label label--topleft label--vert-mirror">Будівельна компанія</p>
-                <p class="label label--bottomright label--vert">+38 (053) 26-93-905</p>
+    <div class="menu__item menu__item--1" data-direction="bt">
+        <div class="menu__item-inner">
+            <div class="mainmenu">
+                <a href="./index.html" class="mainmenu__item transition">Головна</a>
+                <a href="./projects.html" class="mainmenu__item transition">Проекти</a>
+                <a href="./services.html" class="mainmenu__item transition">Послуги</a>
+                <a href="./about.html" class="mainmenu__item transition">Про нас</a>
+                <a href="./contact.html" class="mainmenu__item transition">Контакти</a>
             </div>
+            <p class="label label--topleft label--vert-mirror">Будівельна компанія</p>
+            <p class="label label--bottomright label--vert">+38 (053) 26-93-905</p>
         </div>
-        <div class="menu__item menu__item--2" data-direction="lr">
-            <div class="menu__item-inner">
-                <div class="menu__item-map"></div>
-                <a href="#" class="menu__item-hoverlink">The location</a>
-            </div>
+    </div>
+    <div class="menu__item menu__item--2" data-direction="lr">
+        <div class="menu__item-inner">
+            <div class="menu__item-map"></div>
+            <a href="./contact.html" class="menu__item-hoverlink">The location</a>
         </div>
-        <div class="menu__item menu__item--3" data-direction="bt">
-            <div class="menu__item-inner">
-                <div class="sidemenu">
-                    <a href="#" class="sidemenu__item"><span class="sidemenu__item-inner">
+    </div>
+    <div class="menu__item menu__item--3" data-direction="bt">
+        <div class="menu__item-inner">
+            <div class="sidemenu">
+                <a href="./services.html" class="sidemenu__item transition"><span class="sidemenu__item-inner">
                     <span>Будівніцтво</span>
                     <span>технічне<br>обслуговування</span>
                     <span>Клінінг</span>
                     <span>...</span>
 </span></a>
-                </div>
             </div>
         </div>
-        <div class="menu__item menu__item--4" data-direction="rl">
-            <div class="menu__item-inner">
-                <p class="label label--topleft label--line">Контакти</p>
-                <a href="#" class="menu__item-link">Почніть працювати<br>
-                    з професійною командою<br>
-                    вже сьогодні</a>
-            </div>
+    </div>
+    <div class="menu__item menu__item--4" data-direction="rl">
+        <div class="menu__item-inner">
+            <p class="label label--topleft label--line">Контакти</p>
+            <a href="./contact.html" class="menu__item-link transition">Почніть працювати<br>
+                з професійною командою<br>
+                вже сьогодні</a>
         </div>
-        <div class="menu__item menu__item--5" data-direction="tb">
-            <div class="menu__item-inner">
-                <p class="quote quote-1">Компанія надає всі послуги, які виникають при проведенні будівельно-монтажних робіт.</p>
-                <p class="quote">А також послуги за доглядом за нерухомістю та технічним забезпеченням.</p>
-                <!--<p class="quote">Компанія надає всі послуги, які виникають при проведенні будівельно-монтажних робіт.-->
-                <!--А також послуги за доглядом за нерухомістю та технічним забезпеченням.</p>-->
-            </div>
+    </div>
+    <div class="menu__item menu__item--5" data-direction="tb">
+        <div class="menu__item-inner">
+            <p class="quote quote-1">Компанія надає всі послуги, які виникають при проведенні будівельно-монтажних робіт.</p>
+            <p class="quote">А також послуги за доглядом за нерухомістю та технічним забезпеченням.</p>
+            <!--<p class="quote">Компанія надає всі послуги, які виникають при проведенні будівельно-монтажних робіт.-->
+            <!--А також послуги за доглядом за нерухомістю та технічним забезпеченням.</p>-->
         </div>
-        <!--<button class="action action&#45;&#45;menu"><svg class="icon icon&#45;&#45;menu"><path d="M36,8 L36,0 L100,0 L100,8 L36,8 Z M0,8 L0,0 L24,0 L24,8 L0,8 Z M0,28 L0,20 L71,20 L71,28 L0,28 Z"></path></svg></button>-->
-        <button class="action action--close"><svg class="icon icon--close"><path d="M24 1.485L22.515 0 12 10.515 1.485 0 0 1.485 10.515 12 0 22.515 1.485 24 12 13.484 22.515 24 24 22.515 13.484 12z"></path></svg></button>
-    </nav>
+    </div>
+    <!--<button class="action action&#45;&#45;menu"><svg class="icon icon&#45;&#45;menu"><path d="M36,8 L36,0 L100,0 L100,8 L36,8 Z M0,8 L0,0 L24,0 L24,8 L0,8 Z M0,28 L0,20 L71,20 L71,28 L0,28 Z"></path></svg></button>-->
+    <button class="action action--close"><svg class="icon icon--close"><path d="M24 1.485L22.515 0 12 10.515 1.485 0 0 1.485 10.515 12 0 22.515 1.485 24 12 13.484 22.515 24 24 22.515 13.484 12z"></path></svg></button>
+</nav>
 
 <section class="main">
-    <div class="my-wow ease-in stores oysho" data-animate="fadeInDown" data-duration="0.4s" data-offset="100">
+    <div class="wow fadeInDown ease-in stores stores1" data-wow-duration="0.4s" data-wow-offset="100">
         <a class="stores__link" href="./services.html" >
             <img src="./app/img/main/oysho.jpg" alt="">
             <div class="stores-hover oysho-hover">
@@ -119,7 +121,7 @@
             <img src="./app/img/brand/oysho-w.svg" class="stores__content-logo" />
         </div>
     </div>
-    <div class="my-wow ease-out stores zara" data-animate="fadeInRight" data-duration="0.4s" data-offset="100">
+    <div class="wow fadeInRight ease-out stores stores2" data-wow-duration="0.4s" data-wow-offset="100">
        <a href="./services.html" class="stores__link">
            <img src="./app/img/main/zara.jpg" alt="">
 
@@ -135,7 +137,7 @@
             <img src="./app/img/brand/zara_w.svg" class="stores__content-logo" />
         </div>
    </div>
-    <div class="my-wow ease stores massimo" data-animate="fadeIn" data-duration="0.5s" data-offset="100">
+    <div class="wow fadeIn ease stores stores3" data-wow-duration="0.5s" data-wow-offset="100">
         <a href="./services.html" class="stores__link" >
             <img  src="./app/img/main/massimo.jpg" alt="massimo">
             <div class="stores-hover massimo-hover">
@@ -150,7 +152,7 @@
             <img src="./app/img/brand/massimo_dutti-w.svg" class="stores__content-logo"/>
         </div>
     </div>
-    <div class="my-wow ease-in stores pullbear" data-animate="fadeInUp" data-duration="0.3s" data-offset="100">
+    <div class="wow fadeInUp ease-in stores stores4" data-wow-duration="0.3s" data-wow-offset="100">
         <a href="./services.html" class="stores__link" >
             <img src="./app/img/main/pullbear.jpg" alt="pullbear">
             <div class="stores-hover pullbear-hover">
@@ -165,7 +167,7 @@
             <img src="./app/img/brand/Pull&Bear_w.svg" class="stores__content-logo"/>
         </div>
     </div>
-    <div class="my-wow ease stores bershka" data-animate="fadeInLeft" data-duration="0.5s" data-offset="100">
+    <div class="wow fadeInLeft ease stores stores5" data-wow-duration="0.5s" data-wow-offset="100">
         <a href="./services.html" class="stores__link" >
             <img src="./app/img/main/bershka.jpg" alt="bershka">
             <div class="stores-hover bershka-hover">
@@ -180,7 +182,7 @@
             <img src="./app/img/brand/Bershka_w.svg" class="stores__content-logo"/>
         </div>
     </div>
-    <div class="my-wow ease-out stores piraeus" data-animate="fadeInLeft" data-duration="0.3s" data-offset="100">
+    <div class="wow fadeInLeft ease-out stores stores6" data-wow-duration="0.3s" data-wow-offset="100">
         <a href="./services.html" class="stores__link" >
             <img src="./app/img/main/piraeus.jpg" alt="piraeus">
             <div class="stores-hover piraeus-hover">
@@ -195,7 +197,7 @@
             <img src="./app/img/brand/piraeus-bank-w.svg" class="stores__content-logo"/>
         </div>
     </div>
-    <div class="my-wow ease-in stores stradivarius" data-animate="fadeIn" data-duration="0.4s" data-offset="100">
+    <div class="wow fadeIn ease-in stores stores7" data-wow-duration="0.4s" data-wow-offset="100">
         <a href="./services.html" class="stores__link">
             <img src="./app/img/main/stradivarius.jpg" alt="stradivarius">
             <div class="stores-hover stradivarius-hover">
@@ -210,7 +212,7 @@
             <img src="./app/img/brand/stradivarius-w.svg" class="stores__content-logo"/>
         </div>
     </div>
-    <div class="my-wow ease-out stores eres" data-animate="fadeInRight" data-duration="0.4s" data-offset="100">
+    <div class="wow fadeInRight ease-out stores stores8" data-wow-duration="0.4s" data-wow-offset="100">
         <a href="./services.html" class="stores__link">
             <img src="./app/img/main/eres.jpg" alt="eres">
             <div class="stores-hover eres-hover">
@@ -225,7 +227,7 @@
             <img src="./app/img/brand/Eres-w.svg" class="stores__content-logo"/>
         </div>
     </div>
-    <div class="my-wow ease stores universal" data-animate="fadeInUp" data-duration="0.4s" data-offset="100">
+    <div class="wow fadeInUp ease stores stores9" data-wow-duration="0.4s" data-wow-offset="100">
         <a href="./services.html" class="stores__link">
             <img src="./app/img/main/universal.jpg" alt="universal">
             <div class="stores-hover universal-hover">
@@ -253,8 +255,10 @@
     </div>
 
 </footer>
+
 <script src="app/js/libs/jquery.min.js"></script>
-<script src="app/js/libs/scroll/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="app/js/libs/wow.js"></script>
+<script src="./app/js/libs/smooth/scrooth.js"></script>
 <script src="./app/js/libs/TweenMax.min.js"></script>
 <script src="./app/js/libs/menu.js"></script>
 <script src="app/js/index.js"></script>

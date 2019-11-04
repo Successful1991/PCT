@@ -13,7 +13,6 @@ class Scrooth {
 
   scrollHandler(e) {
     e.preventDefault();
-
     if (!this.running) {
       this.top = this.element.pageYOffset || this.element.scrollTop || 0;
       this.running = true;
@@ -27,14 +26,16 @@ class Scrooth {
   }
 
   scroll() {
-    if (this.running) {
-      this.currentDistance *= this.isDistanceAsc === true ? this.acceleration : this.deceleration;
-      Math.abs(this.currentDistance) < 0.1 && this.isDistanceAsc === false ? this.running = false : 1;
-      Math.abs(this.currentDistance) >= Math.abs(this.distance) ? this.isDistanceAsc = false : 1;
+      if (this.running) {
+          Math.abs(this.currentDistance) >= Math.abs(this.distance) ? this.isDistanceAsc = false : 1;
+          this.top += this.currentDistance;
+          this.element.scrollTo(0, this.top);
 
-      this.top += this.currentDistance;
-      this.element.scrollTo(0, this.top);
-      
+          this.currentDistance *= this.isDistanceAsc === true ? this.acceleration : this.deceleration;
+          ((Math.abs(this.currentDistance) < 0.1 ) && this.isDistanceAsc === false) ||
+          this.top > ( $(document).height() - document.documentElement.clientHeight) ||
+          this.top <= 0 ? this.running = false : 1;
+
       requestAnimationFrame(this.scroll);
     }
   }

@@ -6,7 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="app/css/reset.css">
-    <link rel="stylesheet" href="./app/js/libs/scroll/jquery.mCustomScrollbar.min.css" />
+    <!--<link rel="stylesheet" href="./app/js/libs/smooth/style.css" />-->
+    <!--<link rel="stylesheet" href="./app/js/libs/scroll/jquery.mCustomScrollbar.min.css" />-->
     <link rel="stylesheet" type="text/css" href="app/css/menu.css" />
     <link rel="stylesheet" href="app/css/main.css">
     <title>TEST</title>
@@ -35,12 +36,14 @@
                         </a>
                     </li>
                 </ul>
-                <p class="lang-arrow">∨</p>
+                <p class="lang-arrow"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.42469 15.9099C8.01048 16.4957 8.96023 16.4957 9.54601 15.9099L15.91 9.54596C16.4958 8.96017 16.4958 8.01043 15.91 7.42464C15.3242 6.83885 14.3744 6.83885 13.7887 7.42464L8.48535 12.7279L3.18205 7.42464C2.59626 6.83885 1.64652 6.83885 1.06073 7.42464C0.474944 8.01043 0.474944 8.96017 1.06073 9.54596L7.42469 15.9099Z" fill="#282C34"/>
+                </svg></p>
             </div>
         </div>
         <a href="#" class="header__logo"><img src="./app/img/Logo.svg" alt="logo"></a>
         <div class="header__right">
-            <div class="header__menu  js-header__menu">
+            <div class="header__menu js-header__menu">
                 <div class="header__menu-left">menu</div>
                 <div class="header__menu-right">
                     <span></span>
@@ -49,17 +52,16 @@
             </div>
         </div>
     </div>
-
 </header>
 <nav class="menu">
     <div class="menu__item menu__item--1" data-direction="bt">
         <div class="menu__item-inner">
             <div class="mainmenu">
-                <a href="#" class="mainmenu__item">Головна</a>
-                <a href="#" class="mainmenu__item">Проекти</a>
-                <a href="#" class="mainmenu__item">Послуги</a>
-                <a href="#" class="mainmenu__item">Про нас</a>
-                <a href="#" class="mainmenu__item">Контакти</a>
+                <a href="./index.html" class="mainmenu__item transition">Головна</a>
+                <a href="./projects.html" class="mainmenu__item transition">Проекти</a>
+                <a href="./services.html" class="mainmenu__item transition">Послуги</a>
+                <a href="./about.html" class="mainmenu__item transition">Про нас</a>
+                <a href="./contact.html" class="mainmenu__item transition">Контакти</a>
             </div>
             <p class="label label--topleft label--vert-mirror">Будівельна компанія</p>
             <p class="label label--bottomright label--vert">+38 (053) 26-93-905</p>
@@ -68,13 +70,13 @@
     <div class="menu__item menu__item--2" data-direction="lr">
         <div class="menu__item-inner">
             <div class="menu__item-map"></div>
-            <a href="#" class="menu__item-hoverlink">The location</a>
+            <a href="./contact.html" class="menu__item-hoverlink">The location</a>
         </div>
     </div>
     <div class="menu__item menu__item--3" data-direction="bt">
         <div class="menu__item-inner">
             <div class="sidemenu">
-                <a href="#" class="sidemenu__item"><span class="sidemenu__item-inner">
+                <a href="./services.html" class="sidemenu__item transition"><span class="sidemenu__item-inner">
                     <span>Будівніцтво</span>
                     <span>технічне<br>обслуговування</span>
                     <span>Клінінг</span>
@@ -86,7 +88,7 @@
     <div class="menu__item menu__item--4" data-direction="rl">
         <div class="menu__item-inner">
             <p class="label label--topleft label--line">Контакти</p>
-            <a href="#" class="menu__item-link">Почніть працювати<br>
+            <a href="./contact.html" class="menu__item-link transition">Почніть працювати<br>
                 з професійною командою<br>
                 вже сьогодні</a>
         </div>
@@ -102,9 +104,10 @@
     <!--<button class="action action&#45;&#45;menu"><svg class="icon icon&#45;&#45;menu"><path d="M36,8 L36,0 L100,0 L100,8 L36,8 Z M0,8 L0,0 L24,0 L24,8 L0,8 Z M0,28 L0,20 L71,20 L71,28 L0,28 Z"></path></svg></button>-->
     <button class="action action--close"><svg class="icon icon--close"><path d="M24 1.485L22.515 0 12 10.515 1.485 0 0 1.485 10.515 12 0 22.515 1.485 24 12 13.484 22.515 24 24 22.515 13.484 12z"></path></svg></button>
 </nav>
+    <section>
         <div class="first--screen">
             <div class="first--screen__logo"><img src="./app/img/brand/zara.svg" alt="zara"></div>
-            <div class="first--screen__img"><img src="./app/img/project/zara/Rectangle.jpg" alt="Rectangle" class="my-wow" data-duration="1s" data-offset="0"></div>
+            <div class="first--screen__img"><img src="./app/img/project/zara/Rectangle.jpg" alt="Rectangle" class="wow fadeIn" data-wow-duration="0.3s"></div>
             <div class="first--screen__year">
                 <div class="first--screen__year-wrap">
                     <span class="first--screen__year-span text-stroke">
@@ -125,35 +128,35 @@
         <div class="title__name">
             <div class="title__name__os-1">
                 <h3>
-                    <span class="text-left text-stroke"><span class="my-wow" data-animate="slideInRight" data-duration="0.7s" data-offset="150">П</span></span>
-                    <span class="text-left"><span class="my-wow" data-animate="slideInRight" data-duration="0.7s" data-offset="150">Р</span></span>
-                    <span class="text-left"><span class="my-wow" data-animate="slideInRight" data-duration="0.7s" data-offset="150">О</span></span>
+                    <span class="text-left text-stroke"><span class="wow slideInRight" data-wow-duration="0.2s" data-wow-offset="150" data-wow-delay="0.1s">П</span></span>
+                    <span class="text-left"><span class="wow slideInRight" data-wow-duration="0.2s" data-wow-offset="150" data-wow-delay="0.3s">Р</span></span>
+                    <span class="text-left"><span class="wow slideInRight" data-wow-duration="0.2s" data-wow-offset="150" data-wow-delay="0.5s">О</span></span>
                     <span class="title__block"></span>
                 </h3>
             </div>
             <div class="title__name__os-2">
                 <h3>
-                    <span class="text-left"><span class="my-wow" data-animate="slideInRight" data-duration="0.7s" data-offset="150" data-delay="0">Е</span></span>
-                    <span class="text-left"><span class="my-wow" data-animate="slideInRight" data-duration="0.7s" data-offset="150" data-delay="0.2s">К</span></span>
-                    <span class="text-left"><span class="my-wow" data-animate="slideInRight" data-duration="0.7s" data-offset="150" data-delay="0.4s">Т</span></span>
+                    <span class="text-left"><span class="wow slideInRight" data-wow-duration="0.2s" data-wow-offset="150" data-wow-delay="0.3s">Е</span></span>
+                    <span class="text-left"><span class="wow slideInRight" data-wow-duration="0.2s" data-wow-offset="150" data-wow-delay="0.5s">К</span></span>
+                    <span class="text-left"><span class="wow slideInRight" data-wow-duration="0.2s" data-wow-offset="150" data-wow-delay="0.7s">Т</span></span>
                 </h3>
             </div>
         </div>
         <div class="project">
-            <div class="project__img project__img-1"><img class="my-wow ease-out " src="./app/img/project/zara/1.jpg" alt="1" data-duration="0.5s" data-offset="50"></div>
-            <div class="my-wow ease-out project__year-wrap" data-animate="fadeInUp" data-duration="0.5s" data-offset="150">
+            <div class="project__img project__img-1"><img class="wow fadeIn ease-out " src="./app/img/project/zara/1.jpg" alt="1" data-wow-duration="0.5s" data-wow-offset="100"></div>
+            <div class="wow fadeInUp ease-out project__year-wrap" data-wow-duration="0.5s" data-wow-offset="150">
                 <div class="project__info project__year">
                     <div class="project__info-name project__text-block"><span>рік</span></div>
                     <div class="project__info-number text-stroke">2018</div>
                 </div>
             </div >
-            <div class="my-wow ease-out project__brand-wrap" data-animate="fadeInUp" data-duration="0.4s" data-offset="150">
+            <div class="wow fadeInUp ease-out project__brand-wrap" data-wow-duration="0.4s" data-wow-offset="150">
                 <div class="project__info project__brand">
                     <div class="project__info-name project__text-block"><span>клиент</span></div>
                     <div class="project__info-text">zara</div>
                 </div>
             </div >
-            <div class="my-wow ease-out project__siting-wrap" data-animate="fadeInUp" data-duration="0.7s" data-offset="150">
+            <div class="wow fadeInUp ease-out project__siting-wrap" data-wow-duration="0.7s" data-wow-offset="150">
                 <div class="project__info project__siting">
                     <div class="project__info-name project__text-block"><span>Розміщення</span></div>
                     <div class="project__info-text">Smart<br>
@@ -161,23 +164,26 @@
                         (Київ)</div>
                 </div>
             </div >
-            <div class="my-wow ease-out project__area-wrap" data-animate="fadeInUp" data-duration="0.5s" data-offset="150">
+            <div class="wow fadeInUp ease-out project__area-wrap" data-wow-duration="0.5s" data-wow-offset="150">
                 <div class="project__info project__area">
                     <div class="project__info-name project__text-block"><span>Площа м2</span></div>
                     <div class="project__info-number text-stroke">567</div>
                 </div>
             </div >
-            <div class="project__img project__img-2 "><img class="my-wow ease-out "  src="./app/img/project/zara/2.jpg"  alt="1" data-animate="slideInUp" data-duration="0.6s" data-offset="150"></div>
-            <div class="project__img project__img-3 "><img class="my-wow ease-out "  src="./app/img/project/zara/3.jpg"  alt="2" data-animate="slideInLeft" data-duration="0.5s" data-offset="100"></div>
-            <div class="project__img project__img-4 "><img class="my-wow ease-out "  src="./app/img/project/zara/4.jpg"  alt="3" data-animate="slideInUp" data-duration="1.2s" data-offset="100"></div>
-            <div class="project__img project__img-5 "><img class="my-wow ease-out "  src="./app/img/project/zara/5.jpg"  alt="4" data-animate="slideInUp" data-duration="0.5s" data-offset="150"></div>
-            <div class="project__img project__img-6 "><img class="my-wow ease-out "  src="./app/img/project/zara/6.jpg"  alt="5" data-animate="fadeIn" data-duration="0.4s" data-offset="150"></div>
-            <div class="project__img project__img-7 "><img class="my-wow ease-out "  src="./app/img/project/zara/7.jpg"  alt="6" data-animate="slideInLeft" data-duration=".3s" data-offset="150"></div>
-            <div class="project__img project__img-8 "><img class="my-wow ease-out "  src="./app/img/project/zara/8.jpg"  alt="7" data-animate="slideInRight" data-duration=".4s" data-offset="150"></div>
-            <div class="project__img project__img-9 "><img class="my-wow ease-out "  src="./app/img/project/zara/9.jpg"  alt="8" data-animate="slideInUp" data-duration=".5s" data-offset="100"></div>
-            <div class="project__img project__img-10"><img class="my-wow ease-out " src="./app/img/project/zara/10.jpg" alt="9" data-animate="slideInRight" data-duration=".5s" data-offset="100"></div>
-            <div class="project__img project__img-11"><img class="my-wow ease-out " src="./app/img/project/zara/11.jpg" alt="10" data-animate="slideInUp" data-duration=".6s" data-offset="150"></div>
+            <div class="project__img project__img-2 "><img class="wow slideInUp ease-out "  src="./app/img/project/zara/2.jpg"  alt="1" data-wow-duration="0.6s" data-wow-offset="150"></div>
+            <div class="project__img project__img-3 "><img class="wow slideInLeft ease-out "  src="./app/img/project/zara/3.jpg"  alt="2" data-wow-duration="0.5s" data-wow-offset="100"></div>
+            <div class="project__img project__img-4 "><img class="wow slideInUp ease-out "  src="./app/img/project/zara/4.jpg"  alt="3" data-wow-duration="1.2s" data-wow-offset="100"></div>
+            <div class="project__img project__img-5 "><img class="wow slideInUp ease-out "  src="./app/img/project/zara/5.jpg"  alt="4" data-wow-duration="0.5s" data-wow-offset="150"></div>
+            <div class="project__img project__img-6 "><img class="wow slideIn ease-out "  src="./app/img/project/zara/6.jpg"  alt="5" data-wow-duration="0.4s" data-wow-offset="150"></div>
+            <div class="project__img project__img-7 "><img class="wow slideInLeft ease-out "  src="./app/img/project/zara/7.jpg"  alt="6" data-wow-duration=".3s" data-wow-offset="150"></div>
+            <div class="project__img project__img-8 "><img class="wow slideInRight ease-out "  src="./app/img/project/zara/8.jpg"  alt="7" data-wow-duration=".4s" data-wow-offset="150"></div>
+            <div class="project__img project__img-9 "><img class="wow slideInUp ease-out "  src="./app/img/project/zara/9.jpg"  alt="8" data-wow-duration=".5s" data-wow-offset="100"></div>
+            <div class="project__img project__img-10"><img class="wow slideInRight ease-out " src="./app/img/project/zara/10.jpg" alt="9" data-wow-duration=".5s" data-wow-offset="100"></div>
+            <div class="project__img project__img-11"><img class="wow slideInUp ease-out " src="./app/img/project/zara/11.jpg" alt="10" data-wow-duration=".6s" data-wow-offset="150"></div>
         </div>
+    </section>
+
+
 <!--  сюда подключать нужную разметку в зависимости от языка -->
 
 
@@ -195,9 +201,8 @@
 
 </footer>
 <script src="app/js/libs/jquery.min.js"></script>
-<!--<script src="app/js/libs/scrooth/scrooth.js"></script>-->
-<!--<script src="app/js/libs/wow.js"></script>-->
-<script src="app/js/libs/scroll/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="app/js/libs/wow.js"></script>
+<script src="./app/js/libs/smooth/scrooth.js"></script>
 <script src="./app/js/libs/TweenMax.min.js"></script>
 <script src="./app/js/libs/menu.js"></script>
 <script src="app/js/index.js"></script>

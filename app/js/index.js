@@ -1,23 +1,39 @@
 $(document).ready(function () {
+    // $("body").css("display", "none");
+
+    $("body").fadeIn(200);
+    new WOW().init();
+
+    $("a.transition").click(function(event){
+        event.preventDefault();
+        linkLocation = this.href;
+        $("body").fadeOut(200, redirectPage);
+    });
+
+    function redirectPage() {
+        window.location = linkLocation;
+    }
+
+
     $('.form__submit').on('click', function (e) {
         e.preventDefault();
         ajax_form(e,"POST","/wp-content/themes/heliview/includes/application.php");
     });
 
-    scrollInit();
-    scroll();
+    // scrollInit();
+    // scroll();
     $('.js-header__menu').on('click',function () {
         menu.open();
     });
     $('.map').on('mouseover',function () {
-        console.log('1');
         $('body').mCustomScrollbar("disable");
     });
     $('.map').on('mouseout',function () {
         $('body').mCustomScrollbar("update");
     });
 
-    // new WOW().init();
+
+
 });
 
 function initMap() {
@@ -233,24 +249,7 @@ function successSendMesage(){
     },2000);
 }
 
-function replaceText(block){
-    var text = $(block).html();
-    $(block).html('');
-    text.split('').forEach(function (letter,i) {
-        var span = document.createElement('span');
-        if(i===0){
-            span.className = 'title__animate text-stroke';
-        } else {
-            span.className = 'title__animate';
-        }
-
-        span.innerHTML = letter;
-        $(block).append(span);
-    });
-}
-
 var arr = [];
-var arrParallax = [];
 function scroll() {
     if(arr.length > 0){
         var height =  $(document).height();
@@ -267,13 +266,11 @@ function scroll() {
             } else {return el}
         })
     }
-
 }
 function scrollInit() {
     var list = document.querySelectorAll('.my-wow');
     var height = $(window).height();
     list.forEach(function (el) {
-        arrParallax.push(el);
        var t = {};
        var duration = $(el).data('duration');
        var offset = $(el).data('offset');
@@ -281,7 +278,7 @@ function scrollInit() {
        var animate =  $(el).data('animate');
         t.duration = duration ? duration : '0s';
         t.offset = (offset && height > 768) ? offset*-1 : '100';
-        t.delay = delay ? delay : '0s';
+        t.delay = delay!==undefined ? delay+'s' : '0s';
         t.animate = animate ? animate : 'fadeIn';
        t.element = el;
        arr.push(t);
@@ -296,8 +293,8 @@ function scrollInit() {
         },
         scrollbarPosition: "inside",
 //      scrollbarPosition: "outside",
-        documentTouchScroll: true,
-        contentTouchScroll: 25,
+        documentTouchScroll: false,
+        contentTouchScroll: 10,
         callbacks:{
             whileScrolling:function(){
                 scroll();

@@ -1,12 +1,12 @@
 @keyframes slideInDown {
   from {
     transform: translate3d(0, -100%, 0);
-    visibility: visible;
+    opacity: 1;
   }
 
   to {
     transform: translate3d(0, 0, 0);
-    visibility: visible;
+    opacity: 1;
   }
 }
 
@@ -18,13 +18,13 @@
   from {
     transform: translate3d(-100%, 0, 0);
     z-index: 1;
-    visibility: visible;
+    opacity: 1;
   }
 
   to {
     transform: translate3d(0, 0, 0);
     z-index: 1;
-    visibility: visible;
+    opacity: 1;
   }
 }
 
@@ -35,12 +35,12 @@
 @keyframes slideInRight {
   from {
     transform: translate3d(100%, 0, 0);
-    visibility: visible;
+    opacity: 1;
   }
 
   to {
     transform: translate3d(0, 0, 0);
-    visibility: visible;
+    opacity: 1;
   }
 }
 
@@ -51,13 +51,12 @@
 @keyframes slideInUp {
   from {
     transform: translate3d(0, 100%, 0);
-    visibility: visible;
-
+    opacity: 1;
   }
 
   to {
     transform: translate3d(0, 0, 0);
-    visibility: visible;
+    opacity: 1;
   }
 }
 
@@ -70,7 +69,6 @@
     transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
     animation-timing-function: ease-in;
     opacity: 0;
-    visibility: visible;
   }
 
   40% {
@@ -91,7 +89,6 @@
   to {
     transform: perspective(400px);
     opacity: 1;
-    visibility: visible;
   }
 }
 
@@ -104,12 +101,10 @@
 @keyframes fadeIn {
   from {
     opacity: 0;
-    visibility: visible;
   }
 
   to {
     opacity: 1;
-    visibility: visible;
   }
 }
 
@@ -121,13 +116,11 @@
   from {
     opacity: 0;
     transform: translate3d(0, -100%, 0);
-    visibility: visible;
   }
 
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
-    visibility: visible;
   }
 }
 
@@ -139,13 +132,11 @@
   from {
     opacity: 0;
     transform: translate3d(-100%, 0, 0);
-    visibility: visible;
   }
 
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
-    visibility: visible;
   }
 }
 
@@ -157,13 +148,11 @@
   from {
     opacity: 0;
     transform: translate3d(100%, 0, 0);
-    visibility: visible;
   }
 
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
-    visibility: visible;
   }
 }
 
@@ -175,13 +164,11 @@
   from {
     opacity: 0;
     transform: translate3d(0, 100%, 0);
-    visibility: visible;
   }
 
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
-    visibility: visible;
   }
 }
 
@@ -212,5 +199,29 @@
   to {
     opacity: 1;
     visibility: visible;
+  }
+}
+
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1)
+  }
+  10%,
+  20% {
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg)
+  }
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)
+  }
+  40%,
+  60%,
+  80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)
+  }
+  to {
+    transform: scale3d(1, 1, 1)
   }
 }

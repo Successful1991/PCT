@@ -1,0 +1,75 @@
+.page404-wrap {
+  height: calc(100vh - var(--header-h) - 70px);
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #282C34; }
+
+.page404__title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  line-height: normal;
+  font-size: 150px;
+  text-align: center;
+  -webkit-animation: tada 3s infinite;
+          animation: tada 3s infinite; }
+  .page404__title-small {
+    display: block;
+    font-size: 50px; }
+
+.page404__subtitle {
+  padding: 0 10px;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 30px; }
+
+.page404 .link-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .page404 .link-wrap a {
+    margin: 0 15px;
+    padding: 10px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-width: 220px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #282C34;
+    text-decoration: none;
+    border: 1px solid #282C34; }
+    .page404 .link-wrap a span {
+      z-index: 1; }
+    .page404 .link-wrap a::before {
+      z-index: 0; }
+
+@media screen and (max-width: 578px) {
+  .page404__title {
+    font-size: 70px;
+    margin-bottom: 30px; }
+  .page404-small {
+    font-size: 30px; }
+  .link-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .link-wrap a {
+      margin: 20px auto;
+      width: 70%;
+      min-width: 200px; } }

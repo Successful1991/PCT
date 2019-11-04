@@ -37,7 +37,7 @@
         // Close the menu.
         close() {
             this.toggle('close');
-            var domEl = this.DOM.el;
+            var domEl = this.DOM.el; 
           setTimeout(function(){
             domEl.classList['remove']('menu--open-active');
           },1000);

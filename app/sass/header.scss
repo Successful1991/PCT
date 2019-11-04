@@ -47,7 +47,6 @@ body{
         display: inline-block;
         height: 3px;
         background: #000;
-        transition: all 0.4s;
         &:nth-child(1){
           width: 50%;
         }
@@ -97,10 +96,14 @@ body{
 
 .header__menu{
   cursor: pointer;
+  .header__menu-right span:first-child{
+    transition: all 0.2s linear;
+  }
   &:hover{
     .header__menu-right span:first-child{
-      margin-left: auto;
-      transition: all 0.3s linear;
+      //margin-left: auto;
+      transform: translateX(100%);
+      //transition: all 0.6s linear;
     }
   }
 }

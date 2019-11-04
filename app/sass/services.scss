@@ -125,8 +125,12 @@
       font-size: 18px;
       line-height: 1.4em;
       padding-left: 20px;
+      font-weight: 500;
       list-style: disc;
       overflow-y: auto;
+      li{
+        margin-bottom: 15px;
+      }
     }
   }
 }

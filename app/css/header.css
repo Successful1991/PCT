@@ -60,10 +60,7 @@ body {
       .header__menu-right span {
         display: inline-block;
         height: 3px;
-        background: #000;
-        -webkit-transition: all 0.4s;
-        -o-transition: all 0.4s;
-        transition: all 0.4s; }
+        background: #000; }
         .header__menu-right span:nth-child(1) {
           width: 50%; }
         .header__menu-right span:nth-child(2) {
@@ -109,11 +106,14 @@ body {
 
 .header__menu {
   cursor: pointer; }
+  .header__menu .header__menu-right span:first-child {
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear; }
   .header__menu:hover .header__menu-right span:first-child {
-    margin-left: auto;
-    -webkit-transition: all 0.3s linear;
-    -o-transition: all 0.3s linear;
-    transition: all 0.3s linear; }
+    -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+            transform: translateX(100%); }
 
 @media screen and (max-width: 768px) {
   :root {

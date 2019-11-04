@@ -29,7 +29,7 @@ gulp.task('sass', function () {
 	return gulp.src('app/sass/*.scss')
 		.pipe(sass().on('error', sass.logError))
 		.pipe(prefix({
-			browsers:['last 6 versions']
+            browsers:['last 3 versions']
 		}))
 		.pipe(gulp.dest('app/css'));
 });
